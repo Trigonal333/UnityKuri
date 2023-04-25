@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6687ff9dab264746b151c983c818b68, type: 3}
+  m_Name: CharaStatusList
+  m_EditorClassIdentifier: 
+  StatusList:
+  - charaName: RedBlood
+    hp: 100
+    atk: 5
+    type: 0
+    id: 0
+    speed: 5
+    multiplyTime: 2
+    attackTime: 3
+    maximumNumber: 100
+  - charaName: WhiteBlood
+    hp: 200
+    atk: 50
+    type: 0
+    id: 0
+    speed: 2
+    multiplyTime: 3
+    attackTime: 4
+    maximumNumber: 10
+  - charaName: Virus
+    hp: 100
+    atk: 5
+    type: 0
+    id: 0
+    speed: 5
+    multiplyTime: 2
+    attackTime: 2
+    maximumNumber: 100
