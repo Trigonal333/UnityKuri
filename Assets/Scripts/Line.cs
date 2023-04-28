@@ -104,14 +104,26 @@ public class Line : MonoBehaviour
                     break;
                 case 1:
                     moveDirection = LineRendererDirection.GetPosition(1) - LineRendererDirection.GetPosition(0);
-                    if (destinationEvent != null) {
-                        destinationEvent.Invoke(moveDirection);
-                        ResetSelect.Invoke();
-                    }
+                    destinationEvent.Invoke(moveDirection, 0);
+                    ResetSelect.Invoke();
                     ClearPoint();
                     ClearDirection();
                     phase = 0;
                     break;
+            }
+        }
+
+        float val = Input.GetAxis("Mouse ScrollWheel");
+        if(val<0 && phase == 1)
+        {
+            Vector3 position = ProjectMousetoWorld();
+            if(Calculation.InContour(contours, position))
+            {
+                destinationEvent.Invoke(Calculation.CalcAveratge(contours), 1);
+                ResetSelect.Invoke();
+                ClearPoint();
+                ClearDirection();
+                phase = 0;
             }
         }
         
@@ -120,7 +132,7 @@ public class Line : MonoBehaviour
     Vector3 ProjectMousetoWorld()
     {
         Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        position.z = -0.1f;
+        position.z = 0;
         return position;
     }
 

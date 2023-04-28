@@ -129,6 +129,10 @@ PrefabInstance:
       value: Ally
       objectReference: {fileID: 0}
     - target: {fileID: 2524371667665774390, guid: 739b986b0ad503e42874e5e9f3ac31e7, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2524371667665774390, guid: 739b986b0ad503e42874e5e9f3ac31e7, type: 3}
       propertyPath: m_TagString
       value: Ally
       objectReference: {fileID: 0}
@@ -167,6 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigid2D: {fileID: 5447351536962988649}
+  sprite: {fileID: 4717665212713531703}
   filter:
     useTriggers: 0
     useLayerMask: 0
@@ -181,6 +186,11 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+--- !u!212 &4717665212713531703 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2095369331986677065, guid: 739b986b0ad503e42874e5e9f3ac31e7, type: 3}
+  m_PrefabInstance: {fileID: 6659905525940077694}
+  m_PrefabAsset: {fileID: 0}
 --- !u!50 &5447351536962988649 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 1726107459372363287, guid: 739b986b0ad503e42874e5e9f3ac31e7, type: 3}

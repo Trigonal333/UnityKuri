@@ -15,11 +15,11 @@ MonoBehaviour:
   StatusList:
   - charaName: RedBlood
     hp: 100
-    atk: 5
+    atk: 3
     type: 0
     id: 0
     speed: 5
-    multiplyTime: 2
+    multiplyTime: 3
     attackTime: 3
     maximumNumber: 100
   - charaName: WhiteBlood
@@ -27,16 +27,16 @@ MonoBehaviour:
     atk: 50
     type: 0
     id: 0
-    speed: 2
-    multiplyTime: 3
-    attackTime: 4
-    maximumNumber: 10
+    speed: 3
+    multiplyTime: 3.5
+    attackTime: 3.5
+    maximumNumber: 50
   - charaName: Virus
     hp: 100
-    atk: 5
+    atk: 3
     type: 0
     id: 0
     speed: 5
     multiplyTime: 2
-    attackTime: 2
-    maximumNumber: 100
+    attackTime: 2.4
+    maximumNumber: 200

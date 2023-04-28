@@ -89,6 +89,10 @@ PrefabInstance:
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2524371667665774390, guid: 739b986b0ad503e42874e5e9f3ac31e7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2524371667665774390, guid: 739b986b0ad503e42874e5e9f3ac31e7, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}

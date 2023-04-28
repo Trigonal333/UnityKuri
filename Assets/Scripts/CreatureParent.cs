@@ -9,6 +9,10 @@ public class CreatureParent : MonoBehaviour
     public Rigidbody2D rigid2D;
     public MultiplicationEvent multiEvent;
     public DestroyEvent destroyEvent;
+    public SpriteRenderer sprite;
+    public AnimationEvent animationEvent;
+    public static int maxBuffNum = 10;
+    public static float maxBuffMul = 3f;
 
     protected Status.StatusBase stat;
     protected Vector3 destinationVector;
@@ -35,6 +39,7 @@ public class CreatureParent : MonoBehaviour
     {
         multiEvent=_multiEvent;
         destroyEvent=_destroyEvent;
+        animationEvent = new AnimationEvent();
         return this;
     }
 
@@ -73,7 +78,12 @@ public class CreatureParent : MonoBehaviour
                 attackCandidate.RemoveAll(c => c == null);
                 if(attackCandidate.Count()>0){
                     Collider2D minCol = attackCandidate.OrderBy(collider => Vector2.Distance(collider.ClosestPoint(rigid2D.position), rigid2D.position)).FirstOrDefault();
-                    minCol.gameObject.GetComponentInParent<CreatureParent>().Attacked(stat.atk);
+                    float buff = 1.0f;
+                    if(this.name=="WhiteBlood(Clone)")
+                    {
+                        buff = Mathf.SmoothStep(1.0f, maxBuffMul, Mathf.Clamp(DetectAround("RedBlood(Clone)", 3.0f), 0f, maxBuffNum)/maxBuffNum);
+                    }
+                    minCol.gameObject.GetComponentInParent<CreatureParent>().Attacked(stat.atk*buff);
                 }
                 attackElapsedTime=0;
             }
@@ -92,24 +102,32 @@ public class CreatureParent : MonoBehaviour
     {
         if(stat.hp<=0)
         {
-            destroyEvent.Invoke(this.gameObject.GetInstanceID());
+            destroyEvent.Invoke(gameObject.GetInstanceID());
         }
     }
 
-    public void SetDestination(Vector3 dest)
+    public void SetDestination(Vector3 dest, int mode)
     {
         if(selected) 
         {
-            destinationVector = dest;
+            switch(mode)
+            {
+                case 0:
+                    destinationVector = dest;
+                    break;
+                case 1:
+                    destinationVector = dest - transform.position;
+                    break;
+            }
             Move();
             ETA = destinationVector.magnitude / stat.speed;
-            
         }
     }
 
     public void ResetSelect()
     {
         selected = false;
+        animationEvent.Invoke(1, 0, false);
     }
 
     private void Stop()
@@ -130,15 +148,15 @@ public class CreatureParent : MonoBehaviour
         if(this.CompareTag("Ally"))
         {
             Stop();
-            // Debug.Log(rigid2D.velocity);
             selected = true;
+            animationEvent.Invoke(1, 0, true);
         }
     }
 
     public void HitObject(Collision2D other)
     {
         // Debug.Log(other.relativeVelocity);
-        if(other.relativeVelocity.magnitude > 0.1f)
+        if(Vector2.Angle(rigid2D.velocity, other.relativeVelocity) > 5f)
         {
             Stop();
         }
@@ -172,6 +190,14 @@ public class CreatureParent : MonoBehaviour
     public void Attacked(float atk)
     {
         stat.hp -= atk;
-        // Debug.Log(stat.charaName+"Take"+atk+"Damage"+",Rest:"+stat.hp);
+        animationEvent.Invoke(3, 1.0f, true);
+    }
+
+    private int DetectAround(string type, float radius)
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius);
+        return colliders.Count(collider => 
+        collider?.transform?.parent?.gameObject?.name == type && 
+        collider?.isTrigger == false);
     }
 }

@@ -21,6 +21,7 @@ public class AllyManager : MonoBehaviour
     public static Vector3[] fourDirVec3 = { Vector3.up, Vector3.right, Vector3.down, Vector3.left };
     
     private static List<(int, Vector3)> reserve = new List<(int, Vector3)>();
+    private List<int> destroyReserve = new List<int>();
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -43,6 +44,7 @@ public class AllyManager : MonoBehaviour
 
     protected void LateUpdate()
     {
+        SolveDestroyStack();
         SolveStack();
     }
 
@@ -66,6 +68,20 @@ public class AllyManager : MonoBehaviour
         reserve.Clear();
     }
 
+    private void SolveDestroyStack()
+    {
+        for(int i=0;i<destroyReserve.Count;i++)
+        {
+            int idx = Creatures.FindIndex(obj => obj.GetInstanceID() == destroyReserve[i]);
+            if(idx>=0)
+            {
+                GameObject tmp = Creatures[idx];
+                Creatures.RemoveAt(idx);
+                Destroy(tmp);
+            }
+        }
+    }
+
     protected void Spawn(Vector3 t=default, Quaternion r=default)
     {
         if(Creatures.Count<limit)
@@ -86,15 +102,15 @@ public class AllyManager : MonoBehaviour
         reserve.Add((id, position));
     }
 
+    private void AddDestroyReserve(int instanceID)
+    {
+        destroyReserve.Add(instanceID);
+    }
+
     protected void DestroyCreature(int instanceID)
     {
-        // Debug.Log("Kill"+instanceID);
         int idx = Creatures.FindIndex(obj => obj.GetInstanceID() == instanceID);
-        if(idx>=0)
-        {
-            GameObject tmp = Creatures[idx];
-            Creatures.RemoveAt(idx);
-            Destroy(tmp);
-        }
+        Creatures[idx].SetActive(false);
+        AddDestroyReserve(instanceID);
     }
 }
