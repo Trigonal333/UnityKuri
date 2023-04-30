@@ -7,6 +7,8 @@ TagManager:
   - SelectArea
   - Ally
   - Enemy
+  - Wound
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Obstacle
   - Ally
   - Enemy
-  - 
+  - Wound
   - 
   - 
   - 
@@ -43,4 +45,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Wound
+    uniqueID: 3787696785
+    locked: 0
+  - name: Character
+    uniqueID: 3667741205
+    locked: 0
+  - name: Line
+    uniqueID: 2176164023
+    locked: 0
+  - name: UI
+    uniqueID: 2600321261
     locked: 0

@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1706.6667
     height: 877.3334
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Git for Unity
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1706.6667
     height: 827.3334
-  m_MinSize: {x: 300, y: 150}
+  m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 104
+  controlID: 100
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -59,21 +59,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
+  m_Name: Window
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1286.6666
+    x: 1286
     y: 0
-    width: 420.00012
+    width: 420.66675
     height: 827.3334
-  m_MinSize: {x: 276, y: 71}
+  m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
+  m_ActualView: {fileID: 12}
   m_Panes:
-  - {fileID: 13}
-  m_Selected: 0
+  - {fileID: 16}
+  - {fileID: 12}
+  m_Selected: 1
   m_LastSelected: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -94,11 +95,11 @@ MonoBehaviour:
     y: 0
     width: 316.66666
     height: 490.66666
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 14}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 14}
+  - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &5
@@ -118,14 +119,14 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 490.66666
-    width: 1286.6666
+    width: 1286
     height: 336.66672
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 12}
-  - {fileID: 16}
+  - {fileID: 15}
+  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &6
@@ -218,12 +219,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1286.6666
+    width: 1286
     height: 827.3334
-  m_MinSize: {x: 200, y: 150}
+  m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 41
+  controlID: 440
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,12 +244,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1286.6666
+    width: 1286
     height: 490.66666
-  m_MinSize: {x: 200, y: 100}
+  m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 42
+  controlID: 441
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -259,24 +260,3746 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: AnimatorControllerTool
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 316.66666
     y: 0
-    width: 970
+    width: 969.3334
     height: 490.66666
-  m_MinSize: {x: 202, y: 221}
+  m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 13}
   m_Panes:
-  - {fileID: 15}
-  - {fileID: 17}
-  m_Selected: 0
-  m_LastSelected: 1
+  - {fileID: 18}
+  - {fileID: 20}
+  - {fileID: 14}
+  - {fileID: 13}
+  m_Selected: 3
+  m_LastSelected: 2
 --- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ffb9ccd5681bd841ae77e9e5571f770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Git for Unity
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1286
+    y: 72.66667
+    width: 419.66675
+    height: 806.3334
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  progressMessageClearTime: 109740.51049809999
+  notificationClearTime: -1
+  timeSinceLastRotation: -1
+  currentBranchAndRemoteHasUpdate: 0
+  currentTrackingStatusHasUpdate: 0
+  currentStatusEntriesHasUpdate: 0
+  repositoryProgressHasUpdate: 0
+  appManagerProgressHasUpdate: 0
+  changeTab: 2
+  activeTab: 2
+  initProjectView:
+    hasCompletedInitialCheck: 0
+    isUserDataPresent: 0
+    lastCheckUserChangedEvent:
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      cacheType: 8
+  branchesView:
+    treeLocals:
+      IsRemote: 0
+      folders:
+        keys:
+        - Local branches
+        values:
+        - path: Local branches
+          label: Local branches
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+      checkedFileNodes:
+        keys: []
+        values: []
+      title: Local branches
+      pathSeparator: /
+      displayRootNode: 1
+      isSelectable: 1
+      isCheckable: 0
+      nodes:
+      - path: Local branches
+        label: Local branches
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: master
+        label: master
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 1
+        treeIsCheckable: 0
+        checkState: 0
+      - path: main
+        label: main
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      selectedNode:
+        path: 
+        label: 
+        level: 0
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+    treeRemotes:
+      IsRemote: 1
+      folders:
+        keys:
+        - Remote branches
+        - origin
+        values:
+        - path: Remote branches
+          label: Remote branches
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+        - path: origin
+          label: origin
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+      checkedFileNodes:
+        keys: []
+        values: []
+      title: Remote branches
+      pathSeparator: /
+      displayRootNode: 1
+      isSelectable: 1
+      isCheckable: 0
+      nodes:
+      - path: Remote branches
+        label: Remote branches
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin
+        label: origin
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin/main
+        label: main
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin/master
+        label: master
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      selectedNode:
+        path: origin/master
+        label: master
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+    mode: 0
+    newBranchName: 
+    scroll: {x: 0, y: 0}
+    disableDelete: 1
+    disableCreate: 1
+    lastLocalAndRemoteBranchListChangedEvent:
+      updatedTimeString: 2023-04-28T10:42:13.493+09:00
+      cacheType: 2
+    lastCurrentBranchAndRemoteChange:
+      updatedTimeString: 2023-04-28T10:42:10.528+09:00
+      cacheType: 1
+    currentBranch:
+      name: master
+      tracking: origin/master
+    currentRemote:
+      name: origin
+      url: https://github.com/Triagonal333/UnityKuri
+      login: 
+      user: 
+      host: 
+      function: 0
+      token: 
+    localBranches:
+    - name: master
+      tracking: origin/master
+    - name: main
+      tracking: origin/main
+    remoteBranches:
+    - name: origin/main
+      tracking: '[None]'
+    - name: origin/master
+      tracking: '[None]'
+  changesView:
+    currentBranchHasUpdate: 0
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
+    commitBody: 
+    commitMessage: 
+    currentBranch: master
+    treeScroll: {x: 0, y: 0}
+    treeChanges:
+      assets:
+        keys: []
+        values: []
+      folders:
+        keys: []
+        values: []
+      checkedFileNodes:
+        keys: []
+        values: []
+      title: 
+      pathSeparator: \
+      displayRootNode: 0
+      isSelectable: 1
+      isCheckable: 1
+      isUsingGlobalSelection: 1
+      nodes:
+      - path: 
+        label: 
+        level: -1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      selectedNode:
+        path: 
+        label: 
+        level: 0
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+    gitStatusEntries: []
+    changedFilesText: No changed files
+    lastCurrentBranchChangedEvent:
+      updatedTimeString: 2023-04-28T10:33:12.606+09:00
+      cacheType: 1
+    lastStatusEntriesChangedEvent:
+      updatedTimeString: 2023-04-28T10:36:33.922+09:00
+      cacheType: 6
+    lastLocksChangedEvent:
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      cacheType: 7
+  historyView:
+    currentLogHasUpdate: 0
+    currentTrackingStatusHasUpdate: 0
+    logEntries:
+    - commitID: aa1364021783325db53c591ed58a58fdd5db7ccc
+      mergeA: 
+      mergeB: 
+      authorName: Triagonal333
+      authorEmail: vk22g1978@gmail.com
+      commitEmail: vk22g1978@gmail.com
+      commitName: Triagonal333
+      summary: Indies Zero Submission Version
+      description: 
+      timeString: 2023-04-28T10:36:32.000+09:00
+      commitTimeString: 2023-04-28T10:36:32.000+09:00
+      changes:
+      - path: Assets\Editor.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Editor.meta
+        projectPath: Assets\Editor.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Editor\animator.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Editor\animator.cs
+        projectPath: Assets\Editor\animator.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Editor\animator.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Editor\animator.cs.meta
+        projectPath: Assets\Editor\animator.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\AllyManager.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\AllyManager.prefab
+        projectPath: Assets\Resources\AllyManager.prefab
+        originalPath: Assets\Parents\AllyManager.prefab
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Resources\AllyManager.prefab.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\AllyManager.prefab.meta
+        projectPath: Assets\Resources\AllyManager.prefab.meta
+        originalPath: Assets\Parents\AllyManager.prefab.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Resources\Blink.anim
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Blink.anim
+        projectPath: Assets\Resources\Blink.anim
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\Blink.anim.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Blink.anim.meta
+        projectPath: Assets\Resources\Blink.anim.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\CharaBase.controller
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaBase.controller
+        projectPath: Assets\Resources\CharaBase.controller
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\CharaBase.controller.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaBase.controller.meta
+        projectPath: Assets\Resources\CharaBase.controller.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\CharaBase.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaBase.prefab
+        projectPath: Assets\Resources\CharaBase.prefab
+        originalPath: Assets\Parents\CharaBase.prefab
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Resources\CharaBase.prefab.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaBase.prefab.meta
+        projectPath: Assets\Resources\CharaBase.prefab.meta
+        originalPath: Assets\Parents\CharaBase.prefab.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Resources\CharaStatusList.asset
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaStatusList.asset
+        projectPath: Assets\Resources\CharaStatusList.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Resources\Default.anim
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Default.anim
+        projectPath: Assets\Resources\Default.anim
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\Default.anim.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Default.anim.meta
+        projectPath: Assets\Resources\Default.anim.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\Leaf.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Leaf.prefab
+        projectPath: Assets\Resources\Leaf.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\Leaf.prefab.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Leaf.prefab.meta
+        projectPath: Assets\Resources\Leaf.prefab.meta
+        originalPath: Assets\Parents.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Resources\RedBlood.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\RedBlood.prefab
+        projectPath: Assets\Resources\RedBlood.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Resources\Virus.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Virus.prefab
+        projectPath: Assets\Resources\Virus.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Resources\Warning.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Warning.prefab
+        projectPath: Assets\Resources\Warning.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\Warning.prefab.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Warning.prefab.meta
+        projectPath: Assets\Resources\Warning.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\WhiteBlood.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\WhiteBlood.prefab
+        projectPath: Assets\Resources\WhiteBlood.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\AllyManager.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\AllyManager.cs
+        projectPath: Assets\Scripts\AllyManager.cs
+        originalPath: Assets\Parents\AllyManager.cs
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\AllyManager.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\AllyManager.cs.meta
+        projectPath: Assets\Scripts\AllyManager.cs.meta
+        originalPath: Assets\Parents\AllyManager.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\AttackArea.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\AttackArea.cs
+        projectPath: Assets\Scripts\AttackArea.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\BodyCollide.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\BodyCollide.cs
+        projectPath: Assets\Scripts\BodyCollide.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Calculation.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Calculation.cs
+        projectPath: Assets\Scripts\Calculation.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\CoroutineManager.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\CoroutineManager.cs
+        projectPath: Assets\Scripts\CoroutineManager.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\CoroutineManager.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\CoroutineManager.cs.meta
+        projectPath: Assets\Scripts\CoroutineManager.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\CreatureParent.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\CreatureParent.cs
+        projectPath: Assets\Scripts\CreatureParent.cs
+        originalPath: Assets\Parents\CreatureParent.cs
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\CreatureParent.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\CreatureParent.cs.meta
+        projectPath: Assets\Scripts\CreatureParent.cs.meta
+        originalPath: Assets\Parents\CreatureParent.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\Leaf.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Leaf.cs
+        projectPath: Assets\Scripts\Leaf.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Leaf.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Leaf.cs.meta
+        projectPath: Assets\Scripts\Leaf.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\LeafManager.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\LeafManager.cs
+        projectPath: Assets\Scripts\LeafManager.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\LeafManager.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\LeafManager.cs.meta
+        projectPath: Assets\Scripts\LeafManager.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Line.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Line.cs
+        projectPath: Assets\Scripts\Line.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\UnityEvents.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\UnityEvents.cs
+        projectPath: Assets\Scripts\UnityEvents.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Sprites\Leaf.png
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites\Leaf.png
+        projectPath: Assets\Sprites\Leaf.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Leaf.png.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites\Leaf.png.meta
+        projectPath: Assets\Sprites\Leaf.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ProjectSettings.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\ProjectSettings.asset
+        projectPath: ProjectSettings\ProjectSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 374d56d12becc3d29455628e99e5b0e02c69a881
+      mergeA: 
+      mergeB: 
+      authorName: Triagonal333
+      authorEmail: vk22g1978@gmail.com
+      commitEmail: vk22g1978@gmail.com
+      commitName: Triagonal333
+      summary: sprite
+      description: 
+      timeString: 2023-04-25T19:16:35.000+09:00
+      commitTimeString: 2023-04-25T19:16:35.000+09:00
+      changes:
+      - path: Assets\Sprites\ball.png.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites\ball.png.meta
+        projectPath: Assets\Sprites\ball.png.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: f5df755c403f2328948d1cc8b6791d147e3f7468
+      mergeA: 
+      mergeB: 
+      authorName: GT
+      authorEmail: 2ceim030@mail.u-tokai.ac.jp
+      commitEmail: 2ceim030@mail.u-tokai.ac.jp
+      commitName: GT
+      summary: test2
+      description: 
+      timeString: 2023-04-25T16:30:01.000+09:00
+      commitTimeString: 2023-04-25T16:30:01.000+09:00
+      changes:
+      - path: Packages\manifest.json
+        fullPath: C:\Users\0vk22\My project (2)\Packages\manifest.json
+        projectPath: Packages\manifest.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Packages\packages-lock.json
+        fullPath: C:\Users\0vk22\My project (2)\Packages\packages-lock.json
+        projectPath: Packages\packages-lock.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\AudioManager.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\AudioManager.asset
+        projectPath: ProjectSettings\AudioManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\BurstAotSettings_StandaloneWindows.json
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\BurstAotSettings_StandaloneWindows.json
+        projectPath: ProjectSettings\BurstAotSettings_StandaloneWindows.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ClusterInputManager.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\ClusterInputManager.asset
+        projectPath: ProjectSettings\ClusterInputManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\CommonBurstAotSettings.json
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\CommonBurstAotSettings.json
+        projectPath: ProjectSettings\CommonBurstAotSettings.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\DynamicsManager.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\DynamicsManager.asset
+        projectPath: ProjectSettings\DynamicsManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\EditorBuildSettings.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\EditorBuildSettings.asset
+        projectPath: ProjectSettings\EditorBuildSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\EditorSettings.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\EditorSettings.asset
+        projectPath: ProjectSettings\EditorSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\GraphicsSettings.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\GraphicsSettings.asset
+        projectPath: ProjectSettings\GraphicsSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\InputManager.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\InputManager.asset
+        projectPath: ProjectSettings\InputManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\MemorySettings.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\MemorySettings.asset
+        projectPath: ProjectSettings\MemorySettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\NavMeshAreas.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\NavMeshAreas.asset
+        projectPath: ProjectSettings\NavMeshAreas.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\NetworkManager.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\NetworkManager.asset
+        projectPath: ProjectSettings\NetworkManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\PackageManagerSettings.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\PackageManagerSettings.asset
+        projectPath: ProjectSettings\PackageManagerSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\Physics2DSettings.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\Physics2DSettings.asset
+        projectPath: ProjectSettings\Physics2DSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\PresetManager.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\PresetManager.asset
+        projectPath: ProjectSettings\PresetManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ProjectSettings.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\ProjectSettings.asset
+        projectPath: ProjectSettings\ProjectSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ProjectVersion.txt
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\ProjectVersion.txt
+        projectPath: ProjectSettings\ProjectVersion.txt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\QualitySettings.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\QualitySettings.asset
+        projectPath: ProjectSettings\QualitySettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\SceneTemplateSettings.json
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\SceneTemplateSettings.json
+        projectPath: ProjectSettings\SceneTemplateSettings.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\TagManager.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\TagManager.asset
+        projectPath: ProjectSettings\TagManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\TimeManager.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\TimeManager.asset
+        projectPath: ProjectSettings\TimeManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\TimelineSettings.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\TimelineSettings.asset
+        projectPath: ProjectSettings\TimelineSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\UnityConnectSettings.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\UnityConnectSettings.asset
+        projectPath: ProjectSettings\UnityConnectSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\VFXManager.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\VFXManager.asset
+        projectPath: ProjectSettings\VFXManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\VersionControlSettings.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\VersionControlSettings.asset
+        projectPath: ProjectSettings\VersionControlSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\XRSettings.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\XRSettings.asset
+        projectPath: ProjectSettings\XRSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        fullPath: C:\Users\0vk22\My project (2)\UserSettings\EditorUserSettings.asset
+        projectPath: UserSettings\EditorUserSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2021.dwlt
+        fullPath: C:\Users\0vk22\My project (2)\UserSettings\Layouts\default-2021.dwlt
+        projectPath: UserSettings\Layouts\default-2021.dwlt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\0vk22\My project (2)\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Search.index
+        fullPath: C:\Users\0vk22\My project (2)\UserSettings\Search.index
+        projectPath: UserSettings\Search.index
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Search.settings
+        fullPath: C:\Users\0vk22\My project (2)\UserSettings\Search.settings
+        projectPath: UserSettings\Search.settings
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: 970e92f972ee59c65ac9dce0262ee5992bedda78
+      mergeA: 
+      mergeB: 
+      authorName: GT
+      authorEmail: 2ceim030@mail.u-tokai.ac.jp
+      commitEmail: 2ceim030@mail.u-tokai.ac.jp
+      commitName: GT
+      summary: Submit test
+      description: 
+      timeString: 2023-04-25T16:29:27.000+09:00
+      commitTimeString: 2023-04-25T16:29:27.000+09:00
+      changes:
+      - path: Assets\Editor.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Editor.meta
+        projectPath: Assets\Editor.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Parents.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Parents.meta
+        projectPath: Assets\Parents.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Parents\AllyManager.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Parents\AllyManager.cs
+        projectPath: Assets\Parents\AllyManager.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Parents\AllyManager.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Parents\AllyManager.cs.meta
+        projectPath: Assets\Parents\AllyManager.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Parents\AllyManager.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Parents\AllyManager.prefab
+        projectPath: Assets\Parents\AllyManager.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Parents\AllyManager.prefab.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Parents\AllyManager.prefab.meta
+        projectPath: Assets\Parents\AllyManager.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Parents\CharaBase.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Parents\CharaBase.prefab
+        projectPath: Assets\Parents\CharaBase.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Parents\CharaBase.prefab.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Parents\CharaBase.prefab.meta
+        projectPath: Assets\Parents\CharaBase.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Parents\CreatureParent.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Parents\CreatureParent.cs
+        projectPath: Assets\Parents\CreatureParent.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Parents\CreatureParent.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Parents\CreatureParent.cs.meta
+        projectPath: Assets\Parents\CreatureParent.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources.meta
+        projectPath: Assets\Resources.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\CharaStatusList.asset
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaStatusList.asset
+        projectPath: Assets\Resources\CharaStatusList.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\CharaStatusList.asset.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaStatusList.asset.meta
+        projectPath: Assets\Resources\CharaStatusList.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\RedBlood.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\RedBlood.prefab
+        projectPath: Assets\Resources\RedBlood.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\RedBlood.prefab.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\RedBlood.prefab.meta
+        projectPath: Assets\Resources\RedBlood.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\RedBloodManager.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\RedBloodManager.prefab
+        projectPath: Assets\Resources\RedBloodManager.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\RedBloodManager.prefab.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\RedBloodManager.prefab.meta
+        projectPath: Assets\Resources\RedBloodManager.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\Virus.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Virus.prefab
+        projectPath: Assets\Resources\Virus.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\Virus.prefab.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Virus.prefab.meta
+        projectPath: Assets\Resources\Virus.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\VirusManager.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\VirusManager.prefab
+        projectPath: Assets\Resources\VirusManager.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\VirusManager.prefab.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\VirusManager.prefab.meta
+        projectPath: Assets\Resources\VirusManager.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\Wall.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Wall.prefab
+        projectPath: Assets\Resources\Wall.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\Wall.prefab.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Wall.prefab.meta
+        projectPath: Assets\Resources\Wall.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\WhiteBlood.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\WhiteBlood.prefab
+        projectPath: Assets\Resources\WhiteBlood.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\WhiteBlood.prefab.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\WhiteBlood.prefab.meta
+        projectPath: Assets\Resources\WhiteBlood.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\WhiteBloodManager.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\WhiteBloodManager.prefab
+        projectPath: Assets\Resources\WhiteBloodManager.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\WhiteBloodManager.prefab.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\WhiteBloodManager.prefab.meta
+        projectPath: Assets\Resources\WhiteBloodManager.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scenes.meta
+        projectPath: Assets\Scenes.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scenes\Game.unity.meta
+        projectPath: Assets\Scenes\Game.unity.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Title.unity
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scenes\Title.unity
+        projectPath: Assets\Scenes\Title.unity
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Title.unity.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scenes\Title.unity.meta
+        projectPath: Assets\Scenes\Title.unity.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts.meta
+        projectPath: Assets\Scripts.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Ally.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally.meta
+        projectPath: Assets\Scripts\Ally.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Ally\RedBlood.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\RedBlood.meta
+        projectPath: Assets\Scripts\Ally\RedBlood.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Ally\RedBlood\RedBlood.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\RedBlood\RedBlood.cs
+        projectPath: Assets\Scripts\Ally\RedBlood\RedBlood.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Ally\RedBlood\RedBlood.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\RedBlood\RedBlood.cs.meta
+        projectPath: Assets\Scripts\Ally\RedBlood\RedBlood.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Ally\RedBlood\RedBloodManager.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\RedBlood\RedBloodManager.cs
+        projectPath: Assets\Scripts\Ally\RedBlood\RedBloodManager.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Ally\RedBlood\RedBloodManager.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\RedBlood\RedBloodManager.cs.meta
+        projectPath: Assets\Scripts\Ally\RedBlood\RedBloodManager.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Ally\WhiteBlood.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\WhiteBlood.meta
+        projectPath: Assets\Scripts\Ally\WhiteBlood.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Ally\WhiteBlood\WhiteBlood.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\WhiteBlood\WhiteBlood.cs
+        projectPath: Assets\Scripts\Ally\WhiteBlood\WhiteBlood.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Ally\WhiteBlood\WhiteBlood.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\WhiteBlood\WhiteBlood.cs.meta
+        projectPath: Assets\Scripts\Ally\WhiteBlood\WhiteBlood.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Ally\WhiteBlood\WhiteBloodManager.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\WhiteBlood\WhiteBloodManager.cs
+        projectPath: Assets\Scripts\Ally\WhiteBlood\WhiteBloodManager.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Ally\WhiteBlood\WhiteBloodManager.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\WhiteBlood\WhiteBloodManager.cs.meta
+        projectPath: Assets\Scripts\Ally\WhiteBlood\WhiteBloodManager.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\AttackArea.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\AttackArea.cs
+        projectPath: Assets\Scripts\AttackArea.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\AttackArea.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\AttackArea.cs.meta
+        projectPath: Assets\Scripts\AttackArea.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\BodyCollide.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\BodyCollide.cs
+        projectPath: Assets\Scripts\BodyCollide.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\BodyCollide.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\BodyCollide.cs.meta
+        projectPath: Assets\Scripts\BodyCollide.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Calculation.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Calculation.cs
+        projectPath: Assets\Scripts\Calculation.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Calculation.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Calculation.cs.meta
+        projectPath: Assets\Scripts\Calculation.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Enemy.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Enemy.meta
+        projectPath: Assets\Scripts\Enemy.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Enemy\Virus.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Enemy\Virus.cs
+        projectPath: Assets\Scripts\Enemy\Virus.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Enemy\Virus.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Enemy\Virus.cs.meta
+        projectPath: Assets\Scripts\Enemy\Virus.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Enemy\VirusManager.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Enemy\VirusManager.cs
+        projectPath: Assets\Scripts\Enemy\VirusManager.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Enemy\VirusManager.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Enemy\VirusManager.cs.meta
+        projectPath: Assets\Scripts\Enemy\VirusManager.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Line.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Line.cs
+        projectPath: Assets\Scripts\Line.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Line.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Line.cs.meta
+        projectPath: Assets\Scripts\Line.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Setting.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Setting.cs
+        projectPath: Assets\Scripts\Setting.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Setting.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Setting.cs.meta
+        projectPath: Assets\Scripts\Setting.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\StatusList.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\StatusList.cs
+        projectPath: Assets\Scripts\StatusList.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\StatusList.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\StatusList.cs.meta
+        projectPath: Assets\Scripts\StatusList.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\StatusManager.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\StatusManager.cs
+        projectPath: Assets\Scripts\StatusManager.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\StatusManager.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\StatusManager.cs.meta
+        projectPath: Assets\Scripts\StatusManager.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\UnityEvents.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\UnityEvents.cs
+        projectPath: Assets\Scripts\UnityEvents.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\UnityEvents.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\UnityEvents.cs.meta
+        projectPath: Assets\Scripts\UnityEvents.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites.meta
+        projectPath: Assets\Sprites.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Wall.png
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites\Wall.png
+        projectPath: Assets\Sprites\Wall.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Wall.png.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites\Wall.png.meta
+        projectPath: Assets\Sprites\Wall.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\ball.png
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites\ball.png
+        projectPath: Assets\Sprites\ball.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\ball.png.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites\ball.png.meta
+        projectPath: Assets\Sprites\ball.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: c8ff86ff652275746edf7a971abf43873b46aa11
+      mergeA: 
+      mergeB: 
+      authorName: Guy Tanaka
+      authorEmail: 2ceim030@mail.u-tokai.ac.jp
+      commitEmail: 2ceim030@mail.u-tokai.ac.jp
+      commitName: Guy Tanaka
+      summary: Initial commit
+      description: 
+      timeString: 2023-04-25T16:24:57.000+09:00
+      commitTimeString: 2023-04-25T16:24:57.000+09:00
+      changes:
+      - path: .gitattributes
+        fullPath: C:\Users\0vk22\My project (2)\.gitattributes
+        projectPath: .gitattributes
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: .gitignore
+        fullPath: C:\Users\0vk22\My project (2)\.gitignore
+        projectPath: .gitignore
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\.gitignore
+        fullPath: C:\Users\0vk22\My project (2)\Assets\.gitignore
+        projectPath: Assets\.gitignore
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    statusAhead: 0
+    lastLogChangedEvent:
+      updatedTimeString: 2023-04-28T11:09:03.804+09:00
+      cacheType: 3
+    lastTrackingStatusChangedEvent:
+      updatedTimeString: 2023-04-28T11:09:05.814+09:00
+      cacheType: 5
+    historyControl:
+      scroll: {x: 0, y: 0}
+      entries:
+      - commitID: aa1364021783325db53c591ed58a58fdd5db7ccc
+        mergeA: 
+        mergeB: 
+        authorName: Triagonal333
+        authorEmail: vk22g1978@gmail.com
+        commitEmail: vk22g1978@gmail.com
+        commitName: Triagonal333
+        summary: Indies Zero Submission Version
+        description: 
+        timeString: 2023-04-28T10:36:32.000+09:00
+        commitTimeString: 2023-04-28T10:36:32.000+09:00
+        changes:
+        - path: Assets\Editor.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Editor.meta
+          projectPath: Assets\Editor.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Editor\animator.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Editor\animator.cs
+          projectPath: Assets\Editor\animator.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Editor\animator.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Editor\animator.cs.meta
+          projectPath: Assets\Editor\animator.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\AllyManager.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\AllyManager.prefab
+          projectPath: Assets\Resources\AllyManager.prefab
+          originalPath: Assets\Parents\AllyManager.prefab
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Resources\AllyManager.prefab.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\AllyManager.prefab.meta
+          projectPath: Assets\Resources\AllyManager.prefab.meta
+          originalPath: Assets\Parents\AllyManager.prefab.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Resources\Blink.anim
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Blink.anim
+          projectPath: Assets\Resources\Blink.anim
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\Blink.anim.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Blink.anim.meta
+          projectPath: Assets\Resources\Blink.anim.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\CharaBase.controller
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaBase.controller
+          projectPath: Assets\Resources\CharaBase.controller
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\CharaBase.controller.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaBase.controller.meta
+          projectPath: Assets\Resources\CharaBase.controller.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\CharaBase.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaBase.prefab
+          projectPath: Assets\Resources\CharaBase.prefab
+          originalPath: Assets\Parents\CharaBase.prefab
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Resources\CharaBase.prefab.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaBase.prefab.meta
+          projectPath: Assets\Resources\CharaBase.prefab.meta
+          originalPath: Assets\Parents\CharaBase.prefab.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Resources\CharaStatusList.asset
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaStatusList.asset
+          projectPath: Assets\Resources\CharaStatusList.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Resources\Default.anim
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Default.anim
+          projectPath: Assets\Resources\Default.anim
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\Default.anim.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Default.anim.meta
+          projectPath: Assets\Resources\Default.anim.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\Leaf.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Leaf.prefab
+          projectPath: Assets\Resources\Leaf.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\Leaf.prefab.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Leaf.prefab.meta
+          projectPath: Assets\Resources\Leaf.prefab.meta
+          originalPath: Assets\Parents.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Resources\RedBlood.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\RedBlood.prefab
+          projectPath: Assets\Resources\RedBlood.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Resources\Virus.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Virus.prefab
+          projectPath: Assets\Resources\Virus.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Resources\Warning.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Warning.prefab
+          projectPath: Assets\Resources\Warning.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\Warning.prefab.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Warning.prefab.meta
+          projectPath: Assets\Resources\Warning.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\WhiteBlood.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\WhiteBlood.prefab
+          projectPath: Assets\Resources\WhiteBlood.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\AllyManager.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\AllyManager.cs
+          projectPath: Assets\Scripts\AllyManager.cs
+          originalPath: Assets\Parents\AllyManager.cs
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\AllyManager.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\AllyManager.cs.meta
+          projectPath: Assets\Scripts\AllyManager.cs.meta
+          originalPath: Assets\Parents\AllyManager.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\AttackArea.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\AttackArea.cs
+          projectPath: Assets\Scripts\AttackArea.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\BodyCollide.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\BodyCollide.cs
+          projectPath: Assets\Scripts\BodyCollide.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Calculation.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Calculation.cs
+          projectPath: Assets\Scripts\Calculation.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\CoroutineManager.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\CoroutineManager.cs
+          projectPath: Assets\Scripts\CoroutineManager.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\CoroutineManager.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\CoroutineManager.cs.meta
+          projectPath: Assets\Scripts\CoroutineManager.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\CreatureParent.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\CreatureParent.cs
+          projectPath: Assets\Scripts\CreatureParent.cs
+          originalPath: Assets\Parents\CreatureParent.cs
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\CreatureParent.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\CreatureParent.cs.meta
+          projectPath: Assets\Scripts\CreatureParent.cs.meta
+          originalPath: Assets\Parents\CreatureParent.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\Leaf.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Leaf.cs
+          projectPath: Assets\Scripts\Leaf.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Leaf.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Leaf.cs.meta
+          projectPath: Assets\Scripts\Leaf.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\LeafManager.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\LeafManager.cs
+          projectPath: Assets\Scripts\LeafManager.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\LeafManager.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\LeafManager.cs.meta
+          projectPath: Assets\Scripts\LeafManager.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Line.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Line.cs
+          projectPath: Assets\Scripts\Line.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\UnityEvents.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\UnityEvents.cs
+          projectPath: Assets\Scripts\UnityEvents.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Sprites\Leaf.png
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites\Leaf.png
+          projectPath: Assets\Sprites\Leaf.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Leaf.png.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites\Leaf.png.meta
+          projectPath: Assets\Sprites\Leaf.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ProjectSettings.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\ProjectSettings.asset
+          projectPath: ProjectSettings\ProjectSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 374d56d12becc3d29455628e99e5b0e02c69a881
+        mergeA: 
+        mergeB: 
+        authorName: Triagonal333
+        authorEmail: vk22g1978@gmail.com
+        commitEmail: vk22g1978@gmail.com
+        commitName: Triagonal333
+        summary: sprite
+        description: 
+        timeString: 2023-04-25T19:16:35.000+09:00
+        commitTimeString: 2023-04-25T19:16:35.000+09:00
+        changes:
+        - path: Assets\Sprites\ball.png.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites\ball.png.meta
+          projectPath: Assets\Sprites\ball.png.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: f5df755c403f2328948d1cc8b6791d147e3f7468
+        mergeA: 
+        mergeB: 
+        authorName: GT
+        authorEmail: 2ceim030@mail.u-tokai.ac.jp
+        commitEmail: 2ceim030@mail.u-tokai.ac.jp
+        commitName: GT
+        summary: test2
+        description: 
+        timeString: 2023-04-25T16:30:01.000+09:00
+        commitTimeString: 2023-04-25T16:30:01.000+09:00
+        changes:
+        - path: Packages\manifest.json
+          fullPath: C:\Users\0vk22\My project (2)\Packages\manifest.json
+          projectPath: Packages\manifest.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Packages\packages-lock.json
+          fullPath: C:\Users\0vk22\My project (2)\Packages\packages-lock.json
+          projectPath: Packages\packages-lock.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\AudioManager.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\AudioManager.asset
+          projectPath: ProjectSettings\AudioManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\BurstAotSettings_StandaloneWindows.json
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\BurstAotSettings_StandaloneWindows.json
+          projectPath: ProjectSettings\BurstAotSettings_StandaloneWindows.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ClusterInputManager.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\ClusterInputManager.asset
+          projectPath: ProjectSettings\ClusterInputManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\CommonBurstAotSettings.json
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\CommonBurstAotSettings.json
+          projectPath: ProjectSettings\CommonBurstAotSettings.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\DynamicsManager.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\DynamicsManager.asset
+          projectPath: ProjectSettings\DynamicsManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\EditorBuildSettings.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\EditorBuildSettings.asset
+          projectPath: ProjectSettings\EditorBuildSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\EditorSettings.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\EditorSettings.asset
+          projectPath: ProjectSettings\EditorSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\GraphicsSettings.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\GraphicsSettings.asset
+          projectPath: ProjectSettings\GraphicsSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\InputManager.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\InputManager.asset
+          projectPath: ProjectSettings\InputManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\MemorySettings.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\MemorySettings.asset
+          projectPath: ProjectSettings\MemorySettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\NavMeshAreas.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\NavMeshAreas.asset
+          projectPath: ProjectSettings\NavMeshAreas.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\NetworkManager.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\NetworkManager.asset
+          projectPath: ProjectSettings\NetworkManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\PackageManagerSettings.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\PackageManagerSettings.asset
+          projectPath: ProjectSettings\PackageManagerSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\Physics2DSettings.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\Physics2DSettings.asset
+          projectPath: ProjectSettings\Physics2DSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\PresetManager.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\PresetManager.asset
+          projectPath: ProjectSettings\PresetManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ProjectSettings.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\ProjectSettings.asset
+          projectPath: ProjectSettings\ProjectSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ProjectVersion.txt
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\ProjectVersion.txt
+          projectPath: ProjectSettings\ProjectVersion.txt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\QualitySettings.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\QualitySettings.asset
+          projectPath: ProjectSettings\QualitySettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\SceneTemplateSettings.json
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\SceneTemplateSettings.json
+          projectPath: ProjectSettings\SceneTemplateSettings.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\TagManager.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\TagManager.asset
+          projectPath: ProjectSettings\TagManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\TimeManager.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\TimeManager.asset
+          projectPath: ProjectSettings\TimeManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\TimelineSettings.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\TimelineSettings.asset
+          projectPath: ProjectSettings\TimelineSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\UnityConnectSettings.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\UnityConnectSettings.asset
+          projectPath: ProjectSettings\UnityConnectSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\VFXManager.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\VFXManager.asset
+          projectPath: ProjectSettings\VFXManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\VersionControlSettings.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\VersionControlSettings.asset
+          projectPath: ProjectSettings\VersionControlSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\XRSettings.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\XRSettings.asset
+          projectPath: ProjectSettings\XRSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\EditorUserSettings.asset
+          fullPath: C:\Users\0vk22\My project (2)\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2021.dwlt
+          fullPath: C:\Users\0vk22\My project (2)\UserSettings\Layouts\default-2021.dwlt
+          projectPath: UserSettings\Layouts\default-2021.dwlt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\0vk22\My project (2)\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Search.index
+          fullPath: C:\Users\0vk22\My project (2)\UserSettings\Search.index
+          projectPath: UserSettings\Search.index
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Search.settings
+          fullPath: C:\Users\0vk22\My project (2)\UserSettings\Search.settings
+          projectPath: UserSettings\Search.settings
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: 970e92f972ee59c65ac9dce0262ee5992bedda78
+        mergeA: 
+        mergeB: 
+        authorName: GT
+        authorEmail: 2ceim030@mail.u-tokai.ac.jp
+        commitEmail: 2ceim030@mail.u-tokai.ac.jp
+        commitName: GT
+        summary: Submit test
+        description: 
+        timeString: 2023-04-25T16:29:27.000+09:00
+        commitTimeString: 2023-04-25T16:29:27.000+09:00
+        changes:
+        - path: Assets\Editor.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Editor.meta
+          projectPath: Assets\Editor.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Parents.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Parents.meta
+          projectPath: Assets\Parents.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Parents\AllyManager.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Parents\AllyManager.cs
+          projectPath: Assets\Parents\AllyManager.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Parents\AllyManager.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Parents\AllyManager.cs.meta
+          projectPath: Assets\Parents\AllyManager.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Parents\AllyManager.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Parents\AllyManager.prefab
+          projectPath: Assets\Parents\AllyManager.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Parents\AllyManager.prefab.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Parents\AllyManager.prefab.meta
+          projectPath: Assets\Parents\AllyManager.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Parents\CharaBase.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Parents\CharaBase.prefab
+          projectPath: Assets\Parents\CharaBase.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Parents\CharaBase.prefab.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Parents\CharaBase.prefab.meta
+          projectPath: Assets\Parents\CharaBase.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Parents\CreatureParent.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Parents\CreatureParent.cs
+          projectPath: Assets\Parents\CreatureParent.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Parents\CreatureParent.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Parents\CreatureParent.cs.meta
+          projectPath: Assets\Parents\CreatureParent.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources.meta
+          projectPath: Assets\Resources.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\CharaStatusList.asset
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaStatusList.asset
+          projectPath: Assets\Resources\CharaStatusList.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\CharaStatusList.asset.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaStatusList.asset.meta
+          projectPath: Assets\Resources\CharaStatusList.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\RedBlood.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\RedBlood.prefab
+          projectPath: Assets\Resources\RedBlood.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\RedBlood.prefab.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\RedBlood.prefab.meta
+          projectPath: Assets\Resources\RedBlood.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\RedBloodManager.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\RedBloodManager.prefab
+          projectPath: Assets\Resources\RedBloodManager.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\RedBloodManager.prefab.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\RedBloodManager.prefab.meta
+          projectPath: Assets\Resources\RedBloodManager.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\Virus.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Virus.prefab
+          projectPath: Assets\Resources\Virus.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\Virus.prefab.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Virus.prefab.meta
+          projectPath: Assets\Resources\Virus.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\VirusManager.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\VirusManager.prefab
+          projectPath: Assets\Resources\VirusManager.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\VirusManager.prefab.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\VirusManager.prefab.meta
+          projectPath: Assets\Resources\VirusManager.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\Wall.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Wall.prefab
+          projectPath: Assets\Resources\Wall.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\Wall.prefab.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Wall.prefab.meta
+          projectPath: Assets\Resources\Wall.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\WhiteBlood.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\WhiteBlood.prefab
+          projectPath: Assets\Resources\WhiteBlood.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\WhiteBlood.prefab.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\WhiteBlood.prefab.meta
+          projectPath: Assets\Resources\WhiteBlood.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\WhiteBloodManager.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\WhiteBloodManager.prefab
+          projectPath: Assets\Resources\WhiteBloodManager.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Resources\WhiteBloodManager.prefab.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\WhiteBloodManager.prefab.meta
+          projectPath: Assets\Resources\WhiteBloodManager.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scenes.meta
+          projectPath: Assets\Scenes.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Game.unity.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scenes\Game.unity.meta
+          projectPath: Assets\Scenes\Game.unity.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Title.unity
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scenes\Title.unity
+          projectPath: Assets\Scenes\Title.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Title.unity.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scenes\Title.unity.meta
+          projectPath: Assets\Scenes\Title.unity.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts.meta
+          projectPath: Assets\Scripts.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Ally.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally.meta
+          projectPath: Assets\Scripts\Ally.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Ally\RedBlood.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\RedBlood.meta
+          projectPath: Assets\Scripts\Ally\RedBlood.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Ally\RedBlood\RedBlood.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\RedBlood\RedBlood.cs
+          projectPath: Assets\Scripts\Ally\RedBlood\RedBlood.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Ally\RedBlood\RedBlood.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\RedBlood\RedBlood.cs.meta
+          projectPath: Assets\Scripts\Ally\RedBlood\RedBlood.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Ally\RedBlood\RedBloodManager.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\RedBlood\RedBloodManager.cs
+          projectPath: Assets\Scripts\Ally\RedBlood\RedBloodManager.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Ally\RedBlood\RedBloodManager.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\RedBlood\RedBloodManager.cs.meta
+          projectPath: Assets\Scripts\Ally\RedBlood\RedBloodManager.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Ally\WhiteBlood.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\WhiteBlood.meta
+          projectPath: Assets\Scripts\Ally\WhiteBlood.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Ally\WhiteBlood\WhiteBlood.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\WhiteBlood\WhiteBlood.cs
+          projectPath: Assets\Scripts\Ally\WhiteBlood\WhiteBlood.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Ally\WhiteBlood\WhiteBlood.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\WhiteBlood\WhiteBlood.cs.meta
+          projectPath: Assets\Scripts\Ally\WhiteBlood\WhiteBlood.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Ally\WhiteBlood\WhiteBloodManager.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\WhiteBlood\WhiteBloodManager.cs
+          projectPath: Assets\Scripts\Ally\WhiteBlood\WhiteBloodManager.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Ally\WhiteBlood\WhiteBloodManager.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Ally\WhiteBlood\WhiteBloodManager.cs.meta
+          projectPath: Assets\Scripts\Ally\WhiteBlood\WhiteBloodManager.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\AttackArea.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\AttackArea.cs
+          projectPath: Assets\Scripts\AttackArea.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\AttackArea.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\AttackArea.cs.meta
+          projectPath: Assets\Scripts\AttackArea.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\BodyCollide.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\BodyCollide.cs
+          projectPath: Assets\Scripts\BodyCollide.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\BodyCollide.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\BodyCollide.cs.meta
+          projectPath: Assets\Scripts\BodyCollide.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Calculation.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Calculation.cs
+          projectPath: Assets\Scripts\Calculation.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Calculation.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Calculation.cs.meta
+          projectPath: Assets\Scripts\Calculation.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Enemy.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Enemy.meta
+          projectPath: Assets\Scripts\Enemy.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Enemy\Virus.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Enemy\Virus.cs
+          projectPath: Assets\Scripts\Enemy\Virus.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Enemy\Virus.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Enemy\Virus.cs.meta
+          projectPath: Assets\Scripts\Enemy\Virus.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Enemy\VirusManager.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Enemy\VirusManager.cs
+          projectPath: Assets\Scripts\Enemy\VirusManager.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Enemy\VirusManager.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Enemy\VirusManager.cs.meta
+          projectPath: Assets\Scripts\Enemy\VirusManager.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Line.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Line.cs
+          projectPath: Assets\Scripts\Line.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Line.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Line.cs.meta
+          projectPath: Assets\Scripts\Line.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Setting.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Setting.cs
+          projectPath: Assets\Scripts\Setting.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Setting.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Setting.cs.meta
+          projectPath: Assets\Scripts\Setting.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\StatusList.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\StatusList.cs
+          projectPath: Assets\Scripts\StatusList.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\StatusList.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\StatusList.cs.meta
+          projectPath: Assets\Scripts\StatusList.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\StatusManager.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\StatusManager.cs
+          projectPath: Assets\Scripts\StatusManager.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\StatusManager.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\StatusManager.cs.meta
+          projectPath: Assets\Scripts\StatusManager.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\UnityEvents.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\UnityEvents.cs
+          projectPath: Assets\Scripts\UnityEvents.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\UnityEvents.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\UnityEvents.cs.meta
+          projectPath: Assets\Scripts\UnityEvents.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites.meta
+          projectPath: Assets\Sprites.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Wall.png
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites\Wall.png
+          projectPath: Assets\Sprites\Wall.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Wall.png.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites\Wall.png.meta
+          projectPath: Assets\Sprites\Wall.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\ball.png
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites\ball.png
+          projectPath: Assets\Sprites\ball.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\ball.png.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites\ball.png.meta
+          projectPath: Assets\Sprites\ball.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: c8ff86ff652275746edf7a971abf43873b46aa11
+        mergeA: 
+        mergeB: 
+        authorName: Guy Tanaka
+        authorEmail: 2ceim030@mail.u-tokai.ac.jp
+        commitEmail: 2ceim030@mail.u-tokai.ac.jp
+        commitName: Guy Tanaka
+        summary: Initial commit
+        description: 
+        timeString: 2023-04-25T16:24:57.000+09:00
+        commitTimeString: 2023-04-25T16:24:57.000+09:00
+        changes:
+        - path: .gitattributes
+          fullPath: C:\Users\0vk22\My project (2)\.gitattributes
+          projectPath: .gitattributes
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: .gitignore
+          fullPath: C:\Users\0vk22\My project (2)\.gitignore
+          projectPath: .gitignore
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\.gitignore
+          fullPath: C:\Users\0vk22\My project (2)\Assets\.gitignore
+          projectPath: Assets\.gitignore
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      statusAhead: 0
+      selectedIndex: 0
+    selectedEntry:
+      commitID: aa1364021783325db53c591ed58a58fdd5db7ccc
+      mergeA: 
+      mergeB: 
+      authorName: Triagonal333
+      authorEmail: vk22g1978@gmail.com
+      commitEmail: vk22g1978@gmail.com
+      commitName: Triagonal333
+      summary: Indies Zero Submission Version
+      description: 
+      timeString: 2023-04-28T10:36:32.000+09:00
+      commitTimeString: 2023-04-28T10:36:32.000+09:00
+      changes:
+      - path: Assets\Editor.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Editor.meta
+        projectPath: Assets\Editor.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Editor\animator.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Editor\animator.cs
+        projectPath: Assets\Editor\animator.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Editor\animator.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Editor\animator.cs.meta
+        projectPath: Assets\Editor\animator.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\AllyManager.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\AllyManager.prefab
+        projectPath: Assets\Resources\AllyManager.prefab
+        originalPath: Assets\Parents\AllyManager.prefab
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Resources\AllyManager.prefab.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\AllyManager.prefab.meta
+        projectPath: Assets\Resources\AllyManager.prefab.meta
+        originalPath: Assets\Parents\AllyManager.prefab.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Resources\Blink.anim
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Blink.anim
+        projectPath: Assets\Resources\Blink.anim
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\Blink.anim.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Blink.anim.meta
+        projectPath: Assets\Resources\Blink.anim.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\CharaBase.controller
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaBase.controller
+        projectPath: Assets\Resources\CharaBase.controller
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\CharaBase.controller.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaBase.controller.meta
+        projectPath: Assets\Resources\CharaBase.controller.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\CharaBase.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaBase.prefab
+        projectPath: Assets\Resources\CharaBase.prefab
+        originalPath: Assets\Parents\CharaBase.prefab
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Resources\CharaBase.prefab.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaBase.prefab.meta
+        projectPath: Assets\Resources\CharaBase.prefab.meta
+        originalPath: Assets\Parents\CharaBase.prefab.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Resources\CharaStatusList.asset
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaStatusList.asset
+        projectPath: Assets\Resources\CharaStatusList.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Resources\Default.anim
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Default.anim
+        projectPath: Assets\Resources\Default.anim
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\Default.anim.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Default.anim.meta
+        projectPath: Assets\Resources\Default.anim.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\Leaf.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Leaf.prefab
+        projectPath: Assets\Resources\Leaf.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\Leaf.prefab.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Leaf.prefab.meta
+        projectPath: Assets\Resources\Leaf.prefab.meta
+        originalPath: Assets\Parents.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Resources\RedBlood.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\RedBlood.prefab
+        projectPath: Assets\Resources\RedBlood.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Resources\Virus.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Virus.prefab
+        projectPath: Assets\Resources\Virus.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Resources\Warning.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Warning.prefab
+        projectPath: Assets\Resources\Warning.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\Warning.prefab.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Warning.prefab.meta
+        projectPath: Assets\Resources\Warning.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Resources\WhiteBlood.prefab
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\WhiteBlood.prefab
+        projectPath: Assets\Resources\WhiteBlood.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\AllyManager.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\AllyManager.cs
+        projectPath: Assets\Scripts\AllyManager.cs
+        originalPath: Assets\Parents\AllyManager.cs
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\AllyManager.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\AllyManager.cs.meta
+        projectPath: Assets\Scripts\AllyManager.cs.meta
+        originalPath: Assets\Parents\AllyManager.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\AttackArea.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\AttackArea.cs
+        projectPath: Assets\Scripts\AttackArea.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\BodyCollide.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\BodyCollide.cs
+        projectPath: Assets\Scripts\BodyCollide.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Calculation.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Calculation.cs
+        projectPath: Assets\Scripts\Calculation.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\CoroutineManager.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\CoroutineManager.cs
+        projectPath: Assets\Scripts\CoroutineManager.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\CoroutineManager.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\CoroutineManager.cs.meta
+        projectPath: Assets\Scripts\CoroutineManager.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\CreatureParent.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\CreatureParent.cs
+        projectPath: Assets\Scripts\CreatureParent.cs
+        originalPath: Assets\Parents\CreatureParent.cs
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\CreatureParent.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\CreatureParent.cs.meta
+        projectPath: Assets\Scripts\CreatureParent.cs.meta
+        originalPath: Assets\Parents\CreatureParent.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\Leaf.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Leaf.cs
+        projectPath: Assets\Scripts\Leaf.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Leaf.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Leaf.cs.meta
+        projectPath: Assets\Scripts\Leaf.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\LeafManager.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\LeafManager.cs
+        projectPath: Assets\Scripts\LeafManager.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\LeafManager.cs.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\LeafManager.cs.meta
+        projectPath: Assets\Scripts\LeafManager.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Line.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Line.cs
+        projectPath: Assets\Scripts\Line.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\UnityEvents.cs
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\UnityEvents.cs
+        projectPath: Assets\Scripts\UnityEvents.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Sprites\Leaf.png
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites\Leaf.png
+        projectPath: Assets\Sprites\Leaf.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Leaf.png.meta
+        fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites\Leaf.png.meta
+        projectPath: Assets\Sprites\Leaf.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ProjectSettings.asset
+        fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\ProjectSettings.asset
+        projectPath: ProjectSettings\ProjectSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    treeChanges:
+      assets:
+        keys: []
+        values: []
+      folders:
+        keys:
+        - Assets
+        - Assets\Editor
+        - Assets\Resources
+        - Assets\Scenes
+        - Assets\Scripts
+        - Assets\Sprites
+        - ProjectSettings
+        values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Editor
+          label: Editor
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources
+          label: Resources
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes
+          label: Scenes
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts
+          label: Scripts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Sprites
+          label: Sprites
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: ProjectSettings
+          label: ProjectSettings
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+      checkedFileNodes:
+        keys: []
+        values: []
+      title: 
+      pathSeparator: \
+      displayRootNode: 0
+      isSelectable: 1
+      isCheckable: 0
+      isUsingGlobalSelection: 0
+      nodes:
+      - path: 
+        label: 
+        level: -1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets
+        label: Assets
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Editor.meta
+        label: Editor.meta
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Editor.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Editor.meta
+          projectPath: Assets\Editor.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Editor
+        label: Editor
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Editor\animator.cs
+        label: animator.cs
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Editor\animator.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Editor\animator.cs
+          projectPath: Assets\Editor\animator.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Editor\animator.cs.meta
+        label: animator.cs.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Editor\animator.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Editor\animator.cs.meta
+          projectPath: Assets\Editor\animator.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Resources
+        label: Resources
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Resources\AllyManager.prefab
+        label: AllyManager.prefab
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\AllyManager.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\AllyManager.prefab
+          projectPath: Assets\Resources\AllyManager.prefab
+          originalPath: Assets\Parents\AllyManager.prefab
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Resources\AllyManager.prefab.meta
+        label: AllyManager.prefab.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\AllyManager.prefab.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\AllyManager.prefab.meta
+          projectPath: Assets\Resources\AllyManager.prefab.meta
+          originalPath: Assets\Parents\AllyManager.prefab.meta
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Resources\Blink.anim
+        label: Blink.anim
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Blink.anim
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Blink.anim
+          projectPath: Assets\Resources\Blink.anim
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Resources\Blink.anim.meta
+        label: Blink.anim.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Blink.anim.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Blink.anim.meta
+          projectPath: Assets\Resources\Blink.anim.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Resources\CharaBase.controller
+        label: CharaBase.controller
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\CharaBase.controller
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaBase.controller
+          projectPath: Assets\Resources\CharaBase.controller
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Resources\CharaBase.controller.meta
+        label: CharaBase.controller.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\CharaBase.controller.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaBase.controller.meta
+          projectPath: Assets\Resources\CharaBase.controller.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Resources\CharaBase.prefab
+        label: CharaBase.prefab
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\CharaBase.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaBase.prefab
+          projectPath: Assets\Resources\CharaBase.prefab
+          originalPath: Assets\Parents\CharaBase.prefab
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Resources\CharaBase.prefab.meta
+        label: CharaBase.prefab.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\CharaBase.prefab.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaBase.prefab.meta
+          projectPath: Assets\Resources\CharaBase.prefab.meta
+          originalPath: Assets\Parents\CharaBase.prefab.meta
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Resources\CharaStatusList.asset
+        label: CharaStatusList.asset
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\CharaStatusList.asset
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\CharaStatusList.asset
+          projectPath: Assets\Resources\CharaStatusList.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Resources\Default.anim
+        label: Default.anim
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Default.anim
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Default.anim
+          projectPath: Assets\Resources\Default.anim
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Resources\Default.anim.meta
+        label: Default.anim.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Default.anim.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Default.anim.meta
+          projectPath: Assets\Resources\Default.anim.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Resources\Leaf.prefab
+        label: Leaf.prefab
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Leaf.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Leaf.prefab
+          projectPath: Assets\Resources\Leaf.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Resources\Leaf.prefab.meta
+        label: Leaf.prefab.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Leaf.prefab.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Leaf.prefab.meta
+          projectPath: Assets\Resources\Leaf.prefab.meta
+          originalPath: Assets\Parents.meta
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Resources\RedBlood.prefab
+        label: RedBlood.prefab
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\RedBlood.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\RedBlood.prefab
+          projectPath: Assets\Resources\RedBlood.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Resources\Virus.prefab
+        label: Virus.prefab
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Virus.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Virus.prefab
+          projectPath: Assets\Resources\Virus.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Resources\Warning.prefab
+        label: Warning.prefab
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Warning.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Warning.prefab
+          projectPath: Assets\Resources\Warning.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Resources\Warning.prefab.meta
+        label: Warning.prefab.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Warning.prefab.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\Warning.prefab.meta
+          projectPath: Assets\Resources\Warning.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Resources\WhiteBlood.prefab
+        label: WhiteBlood.prefab
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\WhiteBlood.prefab
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Resources\WhiteBlood.prefab
+          projectPath: Assets\Resources\WhiteBlood.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Scenes
+        label: Scenes
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity
+        label: Game.unity
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Scripts
+        label: Scripts
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scripts\AllyManager.cs
+        label: AllyManager.cs
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\AllyManager.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\AllyManager.cs
+          projectPath: Assets\Scripts\AllyManager.cs
+          originalPath: Assets\Parents\AllyManager.cs
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Scripts\AllyManager.cs.meta
+        label: AllyManager.cs.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\AllyManager.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\AllyManager.cs.meta
+          projectPath: Assets\Scripts\AllyManager.cs.meta
+          originalPath: Assets\Parents\AllyManager.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Scripts\AttackArea.cs
+        label: AttackArea.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\AttackArea.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\AttackArea.cs
+          projectPath: Assets\Scripts\AttackArea.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Scripts\BodyCollide.cs
+        label: BodyCollide.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\BodyCollide.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\BodyCollide.cs
+          projectPath: Assets\Scripts\BodyCollide.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Scripts\Calculation.cs
+        label: Calculation.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Calculation.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Calculation.cs
+          projectPath: Assets\Scripts\Calculation.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Scripts\CoroutineManager.cs
+        label: CoroutineManager.cs
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\CoroutineManager.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\CoroutineManager.cs
+          projectPath: Assets\Scripts\CoroutineManager.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Scripts\CoroutineManager.cs.meta
+        label: CoroutineManager.cs.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\CoroutineManager.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\CoroutineManager.cs.meta
+          projectPath: Assets\Scripts\CoroutineManager.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Scripts\CreatureParent.cs
+        label: CreatureParent.cs
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\CreatureParent.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\CreatureParent.cs
+          projectPath: Assets\Scripts\CreatureParent.cs
+          originalPath: Assets\Parents\CreatureParent.cs
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Scripts\CreatureParent.cs.meta
+        label: CreatureParent.cs.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\CreatureParent.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\CreatureParent.cs.meta
+          projectPath: Assets\Scripts\CreatureParent.cs.meta
+          originalPath: Assets\Parents\CreatureParent.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Scripts\Leaf.cs
+        label: Leaf.cs
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Leaf.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Leaf.cs
+          projectPath: Assets\Scripts\Leaf.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Scripts\Leaf.cs.meta
+        label: Leaf.cs.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Leaf.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Leaf.cs.meta
+          projectPath: Assets\Scripts\Leaf.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Scripts\LeafManager.cs
+        label: LeafManager.cs
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\LeafManager.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\LeafManager.cs
+          projectPath: Assets\Scripts\LeafManager.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Scripts\LeafManager.cs.meta
+        label: LeafManager.cs.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\LeafManager.cs.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\LeafManager.cs.meta
+          projectPath: Assets\Scripts\LeafManager.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Scripts\Line.cs
+        label: Line.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Line.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\Line.cs
+          projectPath: Assets\Scripts\Line.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Scripts\UnityEvents.cs
+        label: UnityEvents.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\UnityEvents.cs
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Scripts\UnityEvents.cs
+          projectPath: Assets\Scripts\UnityEvents.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Sprites
+        label: Sprites
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Sprites\Leaf.png
+        label: Leaf.png
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Leaf.png
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites\Leaf.png
+          projectPath: Assets\Sprites\Leaf.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Sprites\Leaf.png.meta
+        label: Leaf.png.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Leaf.png.meta
+          fullPath: C:\Users\0vk22\My project (2)\Assets\Sprites\Leaf.png.meta
+          projectPath: Assets\Sprites\Leaf.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: ProjectSettings
+        label: ProjectSettings
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: ProjectSettings\ProjectSettings.asset
+        label: ProjectSettings.asset
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: ProjectSettings\ProjectSettings.asset
+          fullPath: C:\Users\0vk22\My project (2)\ProjectSettings\ProjectSettings.asset
+          projectPath: ProjectSettings\ProjectSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      selectedNode:
+        path: 
+        label: 
+        level: 0
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+    detailsScroll: {x: 0, y: 0}
+  settingsView:
+    gitPathView:
+      gitPath: C:\Program Files\Git\cmd\git.exe
+      gitLfsPath: C:\Program Files\Git\cmd\git-lfs.exe
+      errorMessage: 
+      resetToBundled: 0
+      resetToSystem: 0
+      changingManually: 0
+    hasRemote: 1
+    lastCurrentRemoteChangedEvent:
+      updatedTimeString: 2023-04-28T10:33:12.606+09:00
+      cacheType: 1
+    newRepositoryRemoteUrl: https://github.com/Triagonal333/UnityKuri
+    repositoryRemoteName: origin
+    repositoryRemoteUrl: https://github.com/Triagonal333/UnityKuri
+    scroll: {x: 0, y: 0}
+    userSettingsView:
+      gitName: Trigonal333
+      gitEmail: vk22g1978@gmail.com
+      newGitName: Trigonal333
+      newGitEmail: vk22g1978@gmail.com
+      needsSaving: 0
+      lastCheckUserChangedEvent:
+        updatedTimeString: 2023-04-28T10:41:32.202+09:00
+        cacheType: 8
+    webTimeout: 100000
+    gitTimeout: 5000
+  locksView:
+    currentRemoteHasUpdate: 1
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
+    keychainHasUpdate: 1
+    locksControl:
+      scroll: {x: 0, y: 0}
+      gitLockEntries: []
+      assets:
+        keys: []
+        values: []
+      gitStatusDictionary:
+        keys: []
+        values: []
+      selectedEntry:
+        gitLock:
+          id: 
+          path: 
+          owner:
+            name: 
+            email: 
+          lockedAtString: 
+        gitFileStatus: 0
+        lockedAt: 1 1 0001, 09:00
+    lastCurrentRemoteChangedEvent:
+      updatedTimeString: 2023-04-28T10:33:12.606+09:00
+      cacheType: 1
+    lastLocksChangedEvent:
+      updatedTimeString: 2023-04-28T10:35:44.121+09:00
+      cacheType: 7
+    lastStatusEntriesChangedEvent:
+      updatedTimeString: 2023-04-28T10:36:33.922+09:00
+      cacheType: 6
+    lockedFiles: []
+    gitStatusEntries: []
+    currentUsername: 
+    unlockFileMenuContent:
+      m_Text: Release Lock
+      m_Image: {fileID: 0}
+      m_Tooltip: 
+    forceUnlockFileMenuContent:
+      m_Text: Release Lock (forced)
+      m_Image: {fileID: 0}
+      m_Tooltip: 
+  hasRemote: 1
+  currentRemoteName: origin
+  currentBranch: master
+  currentRemoteUrl: https://github.com/Triagonal333/UnityKuri
+  statusAhead: 0
+  statusBehind: 0
+  hasItemsToCommit: 0
+  isTrackingRemoteBranch: 1
+  currentBranchContent:
+    m_Text: master
+    m_Image: {fileID: 0}
+    m_Tooltip: Active branch
+  currentRemoteUrlContent:
+    m_Text: https://github.com/Triagonal333/UnityKuri
+    m_Image: {fileID: 0}
+    m_Tooltip: Url of the origin remote
+  lastCurrentBranchAndRemoteChangedEvent:
+    updatedTimeString: 2023-04-28T11:09:03.771+09:00
+    cacheType: 1
+  lastTrackingStatusChangedEvent:
+    updatedTimeString: 2023-04-28T11:09:05.814+09:00
+    cacheType: 5
+  lastStatusEntriesChangedEvent:
+    updatedTimeString: 2023-04-28T11:09:05.708+09:00
+    cacheType: 6
+  pullButtonContent:
+    m_Text: Pull
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  pushButtonContent:
+    m_Text: Push
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  refreshButtonContent:
+    m_Text: Refresh
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  fetchButtonContent:
+    m_Text: Fetch
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  repositoryProgressValue: 1
+  repositoryProgressMessage: Pushed
+  appManagerProgressValue: 1
+  appManagerProgressMessage: 
+  primaryConnectionUsername: 
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animator
+    m_Image: {fileID: 1711060831702674872, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 316.6667
+    y: 72.66667
+    width: 967.3334
+    height: 469.66666
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_ViewTransforms:
+    m_KeySerializationHelper:
+    - {fileID: -8570470772987200275, guid: 7b896d6221fa83349b19bdd3b07aae8a, type: 2}
+    m_ValueSerializationHelper:
+    - e00: 0.5225263
+      e01: 0
+      e02: 0
+      e03: 45.673676
+      e10: 0
+      e11: 0.5225263
+      e12: 0
+      e13: 175.24332
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  m_PreviewAnimator: {fileID: 0}
+  m_AnimatorController: {fileID: 9100000, guid: 7b896d6221fa83349b19bdd3b07aae8a, type: 2}
+  m_BreadCrumbs:
+  - m_Target: {fileID: -8570470772987200275, guid: 7b896d6221fa83349b19bdd3b07aae8a, type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  stateMachineGraph: {fileID: 0}
+  stateMachineGraphGUI: {fileID: 0}
+  blendTreeGraph: {fileID: 0}
+  blendTreeGraphGUI: {fileID: 0}
+  m_AutoLiveLink: 1
+  m_MiniTool: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_CurrentEditor: 1
+  m_LayerEditor:
+    m_SelectedLayerIndex: 0
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12071, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animation
+    m_Image: {fileID: -3237396543322336831, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 316.6667
+    y: 72.66667
+    width: 967.3334
+    height: 469.66666
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_LockTracker:
+    m_IsLocked: 0
+  m_LastSelectedObjectID: 47006
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -298,7 +4021,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 563.3334
-    width: 1285.6666
+    width: 1285
     height: 315.66672
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -323,23 +4046,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Enemy
+    - Assets/Editor
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Enemy
+  - Assets/Editor
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\0vk22\My project (2)
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 66da0000
-    m_LastClickedID: 55910
-    m_ExpandedIDs: 000000000c060000ae9a000000ca9a3bffffff7f
+    m_SelectedIDs: 56b30000
+    m_LastClickedID: 45910
+    m_ExpandedIDs: 00000000fe6300000064000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -367,7 +4090,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000c060000e4060000
+    m_ExpandedIDs: 00000000fe63000000640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -394,7 +4117,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -423,7 +4146,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
---- !u!114 &13
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -443,9 +4166,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1286.6667
+    x: 1286
     y: 72.66667
-    width: 419.00012
+    width: 419.66675
     height: 806.3334
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -470,7 +4193,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &14
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -509,18 +4232,18 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 78d0f9fffcb3faffaccdfbfff05cfdff2e7cfdffaac5fdffccc5fdff0027feff18b0feff22d2feff26d2feff28d2feff80990000c0990000
+      m_ExpandedIDs: 12a2f6ff4aa2f6ff10a4f6ff66c4f6ffa2c4f6ff4cc6f6ff36caf6ff74caf6ff42ccf6ffa8f2f9ff10fbffffd662000004b600005ab60000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: BodyCollider
-        m_OriginalName: BodyCollider
+        m_Name: LeafManager
+        m_OriginalName: LeafManager
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 70552
+        m_UserData: -396632
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -533,7 +4256,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &15
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -555,7 +4278,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 316.6667
     y: 72.66667
-    width: 968
+    width: 967.3334
     height: 469.66666
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -611,7 +4334,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.666666}
       snapCorner: 1
       id: unity-search-toolbar
       index: 1
@@ -663,7 +4386,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.666666}
       snapCorner: 0
       id: Scene View/Light Settings
       index: 0
@@ -676,7 +4399,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 9.9999695}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 14.666697}
       snapCorner: 0
       id: Scene View/Camera
       index: 1
@@ -689,7 +4412,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.666666}
       snapCorner: 0
       id: Scene View/Cloth Constraints
       index: 2
@@ -702,7 +4425,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.666666}
       snapCorner: 0
       id: Scene View/Cloth Collisions
       index: 3
@@ -754,7 +4477,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.666666}
       snapCorner: 0
       id: Scene View/Occlusion Culling
       index: 4
@@ -767,7 +4490,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.666666}
       snapCorner: 0
       id: Scene View/Physics Debugger
       index: 5
@@ -780,7 +4503,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.666666}
       snapCorner: 0
       id: Scene View/Scene Visibility
       index: 6
@@ -793,7 +4516,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.666666}
       snapCorner: 0
       id: Scene View/Particles
       index: 7
@@ -832,7 +4555,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.666666}
       snapCorner: 0
       id: Scene View/Open Tile Palette
       index: 2
@@ -845,7 +4568,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.666666}
       snapCorner: 0
       id: Scene View/Tilemap Focus
       index: 3
@@ -902,9 +4625,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 7.9739184, y: -5.6376057, z: -0.016703436}
+    m_Target: {x: -13.697089, y: -5.4713254, z: -0.18653555}
     speed: 2
-    m_Value: {x: 0.45470572, y: -0.08420476, z: -0.0050362465}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -954,9 +4677,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.4623213
+    m_Target: 28.653568
     speed: 2
-    m_Value: 1.3122019
+    m_Value: 0.70710677
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -981,7 +4704,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &16
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1003,7 +4726,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 563.3334
-    width: 1285.6666
+    width: 1285
     height: 315.66672
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1015,7 +4738,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
---- !u!114 &17
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1037,7 +4760,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 316.6667
     y: 72.66667
-    width: 968
+    width: 967.3334
     height: 469.66666
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1065,7 +4788,7 @@ MonoBehaviour:
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
-  m_Stats: 1
+  m_Stats: 0
   m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
@@ -1084,7 +4807,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1093,23 +4816,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 968
+      width: 967.3334
       height: 448.66666
     m_Scale: {x: 0.62314814, y: 0.62314814}
-    m_Translation: {x: 484, y: 224.33333}
+    m_Translation: {x: 483.6667, y: 224.33333}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -776.70135
+      x: -776.16644
       y: -360
-      width: 1553.4027
+      width: 1552.3329
       height: 720
     m_MinimalGUI: 1
   m_defaultScale: 0.62314814
-  m_LastWindowPixelSize: {x: 1452, y: 704.5}
+  m_LastWindowPixelSize: {x: 1451, y: 704.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
