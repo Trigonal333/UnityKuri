@@ -8,7 +8,7 @@ public class VirusManager : AllyManager
     protected override void Start()
     {
         base.Start();
-        AddReserve(id: ids, position: Vector3.right*10*spaceForMulti);
+        AddReserve(id: ids, position: Vector3.right*15*spaceForMulti);
     }
 
     // Update is called once per frame

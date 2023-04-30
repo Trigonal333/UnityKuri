@@ -85,6 +85,10 @@ PrefabInstance:
       value: Virus
       objectReference: {fileID: 0}
     - target: {fileID: 2095369331986677067, guid: 739b986b0ad503e42874e5e9f3ac31e7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095369331986677067, guid: 739b986b0ad503e42874e5e9f3ac31e7, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -96,12 +100,61 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6505267689961657721, guid: 739b986b0ad503e42874e5e9f3ac31e7, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a44a06af76744b04585691ce4315e40b, type: 2}
+    - target: {fileID: 9027052406894917513, guid: 739b986b0ad503e42874e5e9f3ac31e7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9027052406894917513, guid: 739b986b0ad503e42874e5e9f3ac31e7, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -1103306308658427177, guid: 739b986b0ad503e42874e5e9f3ac31e7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2095369331986677067, guid: 739b986b0ad503e42874e5e9f3ac31e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7570653298394698568}
   m_SourcePrefab: {fileID: 100100000, guid: 739b986b0ad503e42874e5e9f3ac31e7, type: 3}
+--- !u!1 &6318235125519749811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2095369331986677067, guid: 739b986b0ad503e42874e5e9f3ac31e7, type: 3}
+  m_PrefabInstance: {fileID: 5384860470317428728}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7570653298394698568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318235125519749811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea9a488da755e6a4b86874fa4522d622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigid2D: {fileID: 6723455911741522415}
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+--- !u!50 &6723455911741522415 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1726107459372363287, guid: 739b986b0ad503e42874e5e9f3ac31e7, type: 3}
+  m_PrefabInstance: {fileID: 5384860470317428728}
+  m_PrefabAsset: {fileID: 0}

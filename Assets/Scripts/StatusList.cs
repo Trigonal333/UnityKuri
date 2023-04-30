@@ -8,16 +8,8 @@ public class Status : ScriptableObject
     public List<StatusBase> StatusList = new List<StatusBase>();
 
     [System.Serializable]
-    public class StatusBase
+    public class StatusBase : StatusParent // 初期化とかでだけ使いたい追加パラメータ
     {
-        public string charaName;
-        public float hp = 300;
-        public float atk = 5;
-        public int type;
-        public int id;
-        public float speed = 5;
-        public float multiplyTime = 3;
-        public float attackTime = 1.5f;
         public int maximumNumber = 10;
 
         public StatusBase Clone()
@@ -44,4 +36,15 @@ public class Status : ScriptableObject
     }
 
     public Status.StatusBase this[string name]{get{return StatusList.Find(status => status.charaName == name);}}
+}
+
+public class StatusParent // ゲーム中キャラクターに持たせる用のステータス
+{
+        public string charaName;
+        public float hp = 300;
+        public float atk = 5;
+        public float speed = 5;
+        public float attackTime = 1.5f;
+        public float multiplyTime = 3;
+        public string[] attackTgt;
 }

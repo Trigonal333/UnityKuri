@@ -76,8 +76,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -627226091
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -103,7 +103,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigid2D: {fileID: 1726107459372363287}
-  sprite: {fileID: 2095369331986677065}
   filter:
     useTriggers: 0
     useLayerMask: 0
@@ -179,7 +178,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 6505267689961657721}
-  ac: {fileID: 9100000, guid: 7b896d6221fa83349b19bdd3b07aae8a, type: 2}
 --- !u!1 &2524371667665774390
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +315,7 @@ GameObject:
   - component: {fileID: 7568649991596706712}
   - component: {fileID: 5033073769620972453}
   - component: {fileID: 9202192113684919884}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,10 +349,10 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 3584
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 503
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -367,7 +365,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_CallbackLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 3584
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0

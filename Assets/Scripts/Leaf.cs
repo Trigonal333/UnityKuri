@@ -2,22 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// 障害物本体のクラス
 public class Leaf : MonoBehaviour
 {
-    private float speed = 30f;
     public GameObject warn;
-    private float startTime = 2f;
+
+    private float speed = 30f;
+    private float startTime = 2f; // 移動開始時間
     private float reverseTime;
     private float disappearTime;
     private float elapsedTime;
+    private float damage = 20f;
+
     DestroyEvent destroyEvent;
     // Start is called before the first frame update
     IEnumerator Start()
     {
-        reverseTime = startTime + 1f;
-        disappearTime = reverseTime + 1.2f;
+        reverseTime = startTime + 0.3f; // ある程度進んだら逆に進む
+        disappearTime = reverseTime + 0.5f; // 画面外に戻ったら消滅
         var tmp = Instantiate(warn, transform.position + Vector2.up.Rotate(transform.rotation.eulerAngles.z).ToVec3() * 5, Quaternion.identity, this.transform.parent) as GameObject;
-        yield return new WaitForSeconds(startTime);
+        yield return new WaitForSeconds(startTime); // 出現前に警告を表示
         Destroy(tmp);
     }
 
@@ -47,6 +51,6 @@ public class Leaf : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D other)
     {
-        other.gameObject.GetComponentInParent<CreatureParent>().Attacked(30f);
+        other.gameObject.GetComponentInParent<CreatureParent>().Attacked(damage);
     }
 }

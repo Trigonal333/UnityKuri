@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2347579852208019214
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 901958162074168093, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 901958162074168093, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 901958162074168093, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a5f2b251f57b180478835ed27e2a443c, type: 3}
+    - target: {fileID: 901958162074168093, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_Color.b
+      value: 0.07909098
+      objectReference: {fileID: 0}
+    - target: {fileID: 901958162074168093, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_Color.g
+      value: 0.20535682
+      objectReference: {fileID: 0}
+    - target: {fileID: 901958162074168093, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_Color.r
+      value: 0.4056604
+      objectReference: {fileID: 0}
+    - target: {fileID: 901958162074168093, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 901958162074168095, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_Name
+      value: Platelet
+      objectReference: {fileID: 0}
+    - target: {fileID: 901958162074168095, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_TagString
+      value: Ally
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194799147233188210, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_Name
+      value: PlateletManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424358889704429663, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424358889704429663, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424358889704429663, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424358889704429663, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424358889704429663, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424358889704429663, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424358889704429663, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424358889704429663, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424358889704429663, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424358889704429663, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424358889704429663, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5608101151853714185, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 901958162074168095, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6194799147233188210, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6585390248812459977}
+  m_SourcePrefab: {fileID: 100100000, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+--- !u!1 &8461171269612801660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6194799147233188210, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+  m_PrefabInstance: {fileID: 2347579852208019214}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6585390248812459977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8461171269612801660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ff21a3d9aab744ba7db4059066a488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numOfCreature: 0
+  Creature: {fileID: 1193602779659857282, guid: d77a4ff4960396a4f89189a0ff96ac94, type: 3}
+  Creatures: []
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0

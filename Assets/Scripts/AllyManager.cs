@@ -4,29 +4,30 @@ using UnityEngine;
 
 using System.Linq;
 
+// キャラクター管理の基底クラス
 public class AllyManager : MonoBehaviour
 {
     public int numOfCreature = 0;
     public GameObject Creature;
     public List<GameObject> Creatures = new List<GameObject>();
-    public static List<MultiplicationEvent> multiEvent = new List<MultiplicationEvent>();
+    public static List<MultiplicationEvent> multiEvent = new List<MultiplicationEvent>(); // 増殖、実際の生成、破壊用のイベント
     public static List<SpawnEvent> spawnEvent = new List<SpawnEvent>();
     public static List<DestroyEvent> destroyEvent = new List<DestroyEvent>();
-    public static float spaceForMulti = 1.1f;
+    public static float spaceForMulti = 1.1f; // 増殖の余白
 
     protected int ids;
     protected int limit = 5;
     [SerializeField]
     protected ContactFilter2D filter;
-    public static Vector3[] fourDirVec3 = { Vector3.up, Vector3.right, Vector3.down, Vector3.left };
+    public static Vector3[] fourDirVec3 = { Vector3.up, Vector3.right, Vector3.down, Vector3.left }; // 生成する方向
     
-    private static List<(int, Vector3)> reserve = new List<(int, Vector3)>();
+    private static List<(int, Vector3)> reserve = new List<(int, Vector3)>(); // 生成、破壊イベントの一時保管用
     private List<int> destroyReserve = new List<int>();
 
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        limit = Status.Entity[this.name.Replace("Manager", "")].maximumNumber;
+        limit = Status.Entity[this.name.Replace("Manager", "")].maximumNumber; // Scriptableオブジェクトから最大数を取得
         multiEvent.Add(new MultiplicationEvent());
         spawnEvent.Add(new SpawnEvent());
         destroyEvent.Add(new DestroyEvent());
@@ -88,7 +89,6 @@ public class AllyManager : MonoBehaviour
         {
             Creatures.Add(Instantiate(Creature, t, r, this.transform) as GameObject);
             Creatures.Last().GetComponent<CreatureParent>().Initialize().RegisterEvent(multiEvent[ids], destroyEvent[ids]);
-            // Debug.Log(this.name.Replace("Manager", "")+Creatures.Last().GetInstanceID());
         }
     }
 
@@ -109,7 +109,7 @@ public class AllyManager : MonoBehaviour
 
     protected void DestroyCreature(int instanceID)
     {
-        int idx = Creatures.FindIndex(obj => obj.GetInstanceID() == instanceID);
+        int idx = Creatures.FindIndex(obj => obj.GetInstanceID() == instanceID); // 受け取った時は無効にするだけで破壊は後で行う
         Creatures[idx].SetActive(false);
         AddDestroyReserve(instanceID);
     }

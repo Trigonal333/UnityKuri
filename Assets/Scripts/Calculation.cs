@@ -21,7 +21,7 @@ public static class Calculation
         return a.x*b.y-b.x*a.y;
     }
 
-    public static (bool, Vector3) SearchIntersection(Vector3 a1, Vector3 a2, Vector3 b1, Vector3 b2)
+    public static (bool, Vector3) SearchIntersection(Vector3 a1, Vector3 a2, Vector3 b1, Vector3 b2) // 線分同士が交差しているか
     {
         Vector3 retval = Vector3.zero;
         Vector2 v = new Vector2(b1.x-a1.x, b1.y-a1.y), v1 = new Vector2(a2.x-a1.x, a2.y-a1.y), v2 = new Vector2(b2.x-b1.x, b2.y-b1.y);
@@ -37,7 +37,7 @@ public static class Calculation
         return (false, retval);
     }
 
-    public static float CalcArea(in Vector3[] vectors)
+    public static float CalcArea(in Vector3[] vectors) // 面積の計算
     {
         if(vectors.Length<3) return 0;
         float sum=0;
@@ -48,7 +48,7 @@ public static class Calculation
         return Mathf.Abs(sum/2);
     }
 
-    public static bool InContour(in Vector3[] contour, in Vector3 reference)
+    public static bool InContour(in Vector3[] contour, in Vector3 reference) // 領域の内側にいるかの計算
     {
         int sum = 0;
         for(int i=0;i<contour.Length;i++)
@@ -64,15 +64,10 @@ public static class Calculation
         else return false;
     }
 
-    public static Vector2 Convert3to2(in Vector3 vec3)
-    {
-        return new Vector2(vec3.x, vec3.y);
-    }
-
     public static Vector2[] Convert3to2(in Vector3[] vec3)
     {
         Vector2[] retval=new Vector2[vec3.Length];
-        for(int i=0; i<vec3.Length; i++) retval[i] = Convert3to2(vec3[i]);
+        for(int i=0; i<vec3.Length; i++) retval[i] = vec3[i].ToVec2();
         return retval;
     }
 
@@ -92,14 +87,6 @@ public static class Calculation
         {
             var j = Random.Range(0, i + 1);
             (array[i], array[j]) = (array[j], array[i]);
-        }
-    }
-
-    public static void DestroyChildren(GameObject obj)
-    {
-        foreach (Transform n in obj.transform )
-        {
-            GameObject.Destroy(n.gameObject);
         }
     }
 

@@ -6,20 +6,21 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 using System.Linq;
 
+// 線の描画とキャラクターに移動を命令するクラス
 public class Line : MonoBehaviour
 {
-    public LineRenderer LineRendererContour, LineRendererDirection;
+    public LineRenderer LineRendererContour, LineRendererDirection;// 囲いと移動指示用の線の描画
     public int phase{private set; get;}
     public static Vector3[] contours{private set; get;}
     public static Vector3 moveDirection{private set; get;}
-    public static DestinationEvent destinationEvent;
+    public static DestinationEvent destinationEvent;// 移動先と選択状態の解除を伝えるイベント
     public static UnityEvent ResetSelect;
 
     private Vector3[] linePositions;
     private int lineIndex = 0;
     private Vector3 center;
     private Vector3 principal;
-    private float autoConnect = 1.5f;
+    private float autoConnect = 1.5f; // 線の端同士を自動で繋げる範囲
     private float areaScale = 1.0f, areaThresh = 1.0f;
     [SerializeField]
     private PolygonCollider2D polygonCollider;
@@ -33,8 +34,7 @@ public class Line : MonoBehaviour
         destinationEvent = new DestinationEvent();
         ResetSelect = new UnityEvent();
         float diag = Vector3.Distance(Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)), Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0)));
-        autoConnect = diag/20f;
-        // Debug.Log(diag);
+        autoConnect = diag/20f; // 画面サイズで自動接続の範囲を設定
     }
     
     void Update()
@@ -43,17 +43,17 @@ public class Line : MonoBehaviour
         {
             switch (phase){
                 case 0:
-                    AddPoint(ProjectMousetoWorld());
+                    AddPoint(ProjectMousetoWorld()); // 開始地点の登録
                     break;
                 case 1:
-                    Vector3 position = ProjectMousetoWorld();
-                    if(Calculation.InContour(contours, position))
+                    Vector3 position = ProjectMousetoWorld(); 
+                    if(Calculation.InContour(contours, position)) // 輪郭が引かれていたら方向指示の線を表示
                     {
                         principal = position;
                         LineRendererDirection.positionCount = 1;
                         LineRendererDirection.SetPosition(0, principal);
                     }
-                    else
+                    else // 引かれてなかったら選択キャンセル
                     {
                         ResetSelect.Invoke();
                         ClearPoint();
@@ -67,9 +67,9 @@ public class Line : MonoBehaviour
         {
             switch (phase){
                 case 0:
-                    AddPoint(ProjectMousetoWorld());
+                    AddPoint(ProjectMousetoWorld()); // 長押しで線を引く
                     break;
-                case 1:
+                case 1: // 方向指示はマウスに追従
                     Vector3 position = ProjectMousetoWorld();
                     // position-=principal;
                     LineRendererDirection.positionCount = 2;
@@ -88,9 +88,9 @@ public class Line : MonoBehaviour
                     LineRendererContour.GetPositions(linePositions);
                     // Debug.Log(linePositions.Length);
                     SearchContour();
-                    polygonCollider.points = Calculation.Convert3to2(contours);
+                    polygonCollider.points = Calculation.Convert3to2(contours);// マウスを離したら輪郭が閉じているか確認
 
-                    if(contours.Length>0)
+                    if(contours.Length>0) // 輪郭があったら保存して方向指示へ
                     {
                         OverWriteLine();
                         center = Calculation.CalcAveratge(contours);
@@ -103,7 +103,7 @@ public class Line : MonoBehaviour
                     }
                     break;
                 case 1:
-                    moveDirection = LineRendererDirection.GetPosition(1) - LineRendererDirection.GetPosition(0);
+                    moveDirection = LineRendererDirection.GetPosition(1) - LineRendererDirection.GetPosition(0); // 方向を指示
                     destinationEvent.Invoke(moveDirection, 0);
                     ResetSelect.Invoke();
                     ClearPoint();
@@ -114,7 +114,7 @@ public class Line : MonoBehaviour
         }
 
         float val = Input.GetAxis("Mouse ScrollWheel");
-        if(val<0 && phase == 1)
+        if(val<0 && phase == 1) // 選択後に下スクロールで中央寄せ
         {
             Vector3 position = ProjectMousetoWorld();
             if(Calculation.InContour(contours, position))
@@ -132,7 +132,7 @@ public class Line : MonoBehaviour
     Vector3 ProjectMousetoWorld()
     {
         Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        position.z = 0;
+        position.z = -0.01f;
         return position;
     }
 
@@ -144,7 +144,7 @@ public class Line : MonoBehaviour
         lineIndex++;
     }
     
-    void ClearPoint()
+    void ClearPoint() // 輪郭の消去
     {
         polygonCollider.enabled = false;
         LineRendererContour.positionCount = 1;
@@ -172,10 +172,6 @@ public class Line : MonoBehaviour
             }
             if(foundInter) break;
         }
-        // Debug.Log(foundInter);
-        // Debug.Log(intersect);
-        //     Debug.Log(i);
-        //     Debug.Log(j);
         if(!foundInter)
         {
             contours = new Vector3[0];

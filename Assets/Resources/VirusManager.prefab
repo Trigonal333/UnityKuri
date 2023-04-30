@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: VirusManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6194799147233188210, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194799147233188210, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 6424358889704429663, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -62,7 +70,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5608101151853714185, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 901958162074168095, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6194799147233188210, guid: fb10ea072f49c1a4c9dc6eff78bb63f7, type: 3}

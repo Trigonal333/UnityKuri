@@ -4,17 +4,15 @@ using UnityEngine;
 
 using System.Linq;
 
+// キャラクターの基底クラス
 public class CreatureParent : MonoBehaviour
 {
     public Rigidbody2D rigid2D;
-    public MultiplicationEvent multiEvent;
+    public MultiplicationEvent multiEvent; // 増殖、破壊、アニメーション用のイベント
     public DestroyEvent destroyEvent;
-    public SpriteRenderer sprite;
     public AnimationEvent animationEvent;
-    public static int maxBuffNum = 10;
-    public static float maxBuffMul = 3f;
 
-    protected Status.StatusBase stat;
+    protected StatusParent stat;
     protected Vector3 destinationVector;
     protected bool selected;
     protected float ETA;
@@ -26,6 +24,7 @@ public class CreatureParent : MonoBehaviour
     protected List<Collider2D> attackCandidate = new List<Collider2D>();
 
     private bool isStop = true;
+    private List<string> attackTag = new List<string>(){};
 
     public CreatureParent Initialize()
     {
@@ -75,16 +74,7 @@ public class CreatureParent : MonoBehaviour
         {
             if(attackElapsedTime>stat.attackTime)
             {
-                attackCandidate.RemoveAll(c => c == null);
-                if(attackCandidate.Count()>0){
-                    Collider2D minCol = attackCandidate.OrderBy(collider => Vector2.Distance(collider.ClosestPoint(rigid2D.position), rigid2D.position)).FirstOrDefault();
-                    float buff = 1.0f;
-                    if(this.name=="WhiteBlood(Clone)")
-                    {
-                        buff = Mathf.SmoothStep(1.0f, maxBuffMul, Mathf.Clamp(DetectAround("RedBlood(Clone)", 3.0f), 0f, maxBuffNum)/maxBuffNum);
-                    }
-                    minCol.gameObject.GetComponentInParent<CreatureParent>().Attacked(stat.atk*buff);
-                }
+                Attack();
                 attackElapsedTime=0;
             }
             else
@@ -145,12 +135,9 @@ public class CreatureParent : MonoBehaviour
 
     public virtual void EnterLine(Collider2D other)
     {
-        if(this.CompareTag("Ally"))
-        {
-            Stop();
-            selected = true;
-            animationEvent.Invoke(1, 0, true);
-        }
+        Stop();
+        selected = true;
+        animationEvent.Invoke(1, 0, true);
     }
 
     public void HitObject(Collision2D other)
@@ -158,46 +145,49 @@ public class CreatureParent : MonoBehaviour
         // Debug.Log(other.relativeVelocity);
         if(Vector2.Angle(rigid2D.velocity, other.relativeVelocity) > 5f)
         {
-            Stop();
+            // Stop();
         }
     }
 
     public void LeaveObject(Collision2D other)
     {
-        Move();
+        // Move();
     }
 
-    public void AddCandidate(Collider2D other)
+    public void AddCandidate(Collider2D other) // 周囲に攻撃対象がいる場合だけ攻撃カウントダウンを開始したい
     {
-        if(!other.isTrigger)
+        if(stat.attackTgt.Any(t => other.transform.CompareTag(t))) // 攻撃対象に含まれてる場合カウント
         {
-            if((other.gameObject.CompareTag("Ally") && this.gameObject.CompareTag("Enemy")) || (other.gameObject.CompareTag("Enemy") && this.gameObject.CompareTag("Ally")))
-            {
-                attackCandidate.Add(other);
-            }
+            attackCandidate.Add(other);
         }
     }
 
     public void RemoveCandidate(Collider2D other)
     {
-        int idx = attackCandidate.FindIndex(obj => obj.GetInstanceID() == other.GetInstanceID());
-        if(idx>=0)
-        {
-            attackCandidate.RemoveAt(idx);
-        }
+        attackCandidate.RemoveAll(obj => obj.GetInstanceID() == other.GetInstanceID());
     }
 
-    public void Attacked(float atk)
+    public void Attacked(float atk) // 攻撃を「受けた」関数、防御力とか追加したい時用
     {
         stat.hp -= atk;
         animationEvent.Invoke(3, 1.0f, true);
     }
 
-    private int DetectAround(string type, float radius)
+    protected int DetectAround(string type, float radius) // 数を正確に調べたい場合、Enter&Exitだと内部でDestroyされた場合に漏れがある
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius);
         return colliders.Count(collider => 
         collider?.transform?.parent?.gameObject?.name == type && 
         collider?.isTrigger == false);
+    }
+
+    protected virtual void Attack()
+    {
+        attackCandidate.RemoveAll(c => c == null); // 内部でDestroyされた場合OnExitが呼ばれないのでその対策
+        if(attackCandidate.Count()>0){
+            Collider2D minCol = attackCandidate.OrderBy(collider => Vector2.Distance(collider.ClosestPoint(rigid2D.position), rigid2D.position)).FirstOrDefault();
+            var tmp = minCol.gameObject.GetComponent<IDamageable>();
+            if(tmp != null) tmp.Attacked(stat.atk);
+        }
     }
 }

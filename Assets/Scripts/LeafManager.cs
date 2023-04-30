@@ -4,6 +4,7 @@ using UnityEngine;
 
 using System.Linq;
 
+// 障害物を管理するクラス
 public class LeafManager : MonoBehaviour
 {
     public GameObject Leaf;
@@ -11,12 +12,10 @@ public class LeafManager : MonoBehaviour
     public List<GameObject> Leaves = new List<GameObject>();
     private int limit = 5;
     private float elapsedTime;
-    private float minAppearTime = 3f;
+    private float minAppearTime = 3f; // 生成までの最小～最大時間
     private float maxAppearTime = 7f;
-    private float appearTime;
-    private float angleRange=20f;
-    private Vector3 position;
-    private Quaternion rotation;
+    private float appearTime; // 実際に生成される時間
+    private float angleRange=20f; // 生成する際の角度
     DestroyEvent destroyEvent = new DestroyEvent();
     private List<int> destroyReserve = new List<int>();
 
@@ -32,8 +31,10 @@ public class LeafManager : MonoBehaviour
     {
         if(elapsedTime>appearTime)
         {
-            if(Leaves.Count<limit)
-            {
+            if(Leaves.Count<limit) 
+            { // 一定時間が経過したら画面端のどこかに生成
+                Vector3 position;
+                Quaternion rotation;
                 switch(Random.Range(0, 4))
                 {
                     case 0:
@@ -51,6 +52,10 @@ public class LeafManager : MonoBehaviour
                     case 3:
                         position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Random.Range(0, Screen.height), 0));
                         rotation = Quaternion.Euler(0, 0, Random.Range(-angleRange, angleRange)+90);
+                        break;
+                    default:
+                        position = Vector3.zero;
+                        rotation = Quaternion.identity;
                         break;
                 }
                 position.z = 0;

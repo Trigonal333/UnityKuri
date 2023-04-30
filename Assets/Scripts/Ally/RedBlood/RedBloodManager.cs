@@ -8,12 +8,7 @@ public class RedBloodManager : AllyManager
     protected override void Start()
     {
         base.Start();
-        AddReserve(id: ids, position: Vector3.zero);
+        AddReserve(id: ids, position: Vector3.left*10);
     }
 
-    // Update is called once per frame
-    protected override void Update()
-    {
-        base.Update();
-    }
 }

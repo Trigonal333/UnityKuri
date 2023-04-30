@@ -8,12 +8,7 @@ public class WhiteBloodManager : AllyManager
     protected override void Start()
     {
         base.Start();
-        AddReserve(id: ids, position: Vector3.left*spaceForMulti);
+        AddReserve(id: ids, position: Vector3.left*3);
     }
 
-    // Update is called once per frame
-    protected override void Update()
-    {
-        base.Update();
-    }
 }

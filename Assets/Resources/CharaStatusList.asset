@@ -16,27 +16,37 @@ MonoBehaviour:
   - charaName: RedBlood
     hp: 100
     atk: 3
-    type: 0
-    id: 0
     speed: 5
-    multiplyTime: 3
     attackTime: 3
+    multiplyTime: 3
+    attackTgt:
+    - Enemy
     maximumNumber: 100
   - charaName: WhiteBlood
     hp: 200
     atk: 50
-    type: 0
-    id: 0
     speed: 3
-    multiplyTime: 3.5
     attackTime: 3.5
+    multiplyTime: 3.5
+    attackTgt:
+    - Enemy
     maximumNumber: 50
   - charaName: Virus
     hp: 100
     atk: 3
-    type: 0
-    id: 0
     speed: 5
-    multiplyTime: 2
     attackTime: 2.4
-    maximumNumber: 200
+    multiplyTime: 2
+    attackTgt:
+    - Ally
+    - Wound
+    maximumNumber: 150
+  - charaName: Platelet
+    hp: 150
+    atk: 7
+    speed: 7
+    attackTime: 1.5
+    multiplyTime: 2
+    attackTgt:
+    - Wound
+    maximumNumber: 100
