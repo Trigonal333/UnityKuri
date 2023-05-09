@@ -9,7 +9,7 @@ public class CreatureParent : MonoBehaviour
 {
     public Rigidbody2D rigid2D;
     public MultiplicationEvent multiEvent; // 増殖、破壊、アニメーション用のイベント
-    public DestroyEvent destroyEvent;
+    public PassSelfEvent destroyEvent;
     public AnimationEvent animationEvent;
 
     protected StatusParent stat;
@@ -34,7 +34,7 @@ public class CreatureParent : MonoBehaviour
         return this;
     }
 
-    public CreatureParent RegisterEvent(in MultiplicationEvent _multiEvent, in DestroyEvent _destroyEvent)
+    public CreatureParent RegisterEvent(in MultiplicationEvent _multiEvent, in PassSelfEvent _destroyEvent)
     {
         multiEvent=_multiEvent;
         destroyEvent=_destroyEvent;
@@ -92,7 +92,7 @@ public class CreatureParent : MonoBehaviour
     {
         if(stat.hp<=0)
         {
-            destroyEvent.Invoke(gameObject.GetInstanceID());
+            destroyEvent.Invoke(gameObject);
         }
     }
 

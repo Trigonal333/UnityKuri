@@ -10,3 +10,4 @@ public class SpawnEvent : UnityEvent<Vector3, Quaternion> {}
 public class DestroyEvent : UnityEvent<int> {}
 public class AnimationEvent : UnityEvent<float, float, bool> {}
 public class DestroyOrRemoveEvent : UnityEvent<int, bool> {}
+public class PassSelfEvent : UnityEvent<GameObject> {}
