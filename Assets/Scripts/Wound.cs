@@ -8,17 +8,20 @@ public class Wound : MonoBehaviour, IDamageable
 {
     private float hp = 500;
     private float maximum = 2000;
+    private float highest = 0;
     private float reachedMax;
     DestroyOrRemoveEvent destroyEvent;
     public Slider hpBar;
     public Collider2D coll;
     public SpriteRenderer sprite;
+    public ParticleSystem particle;
     // Start is called before the first frame update
     void Start()
     {
         sprite.color = Utility.ConvertHEXA2Color("#8D5AC0");
         hpBar.maxValue = maximum;
         hpBar.value = hp;
+        highest = hp;
     }
 
     // Update is called once per frame
@@ -32,6 +35,7 @@ public class Wound : MonoBehaviour, IDamageable
         if(hp>maximum) // 回復しきったら消滅
         {
             destroyEvent.Invoke(gameObject.GetInstanceID(), true);
+            ScoreManage.ScoreEvent.Invoke((int)(maximum));
         }
         else if(hp<0) // ダメージを受けたら障害物として残る
         {
@@ -54,5 +58,11 @@ public class Wound : MonoBehaviour, IDamageable
     {
         hp -= atk;
         hpBar.value = hp;
+        if(atk<0) particle.Play();
+        if(hp>highest && highest <maximum)
+        {
+            ScoreManage.ScoreEvent.Invoke((int)Mathf.Round(hp-highest));
+            highest=hp;
+        }
     }
 }
