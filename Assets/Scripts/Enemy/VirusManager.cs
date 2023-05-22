@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class VirusManager : AllyManager
 {
+    private Quadtree quad = new Quadtree(4, Vector3.zero, AllyManager.spaceForMulti*2);
+    private List<Dictionary<int, GameObject>> cluster = new List<Dictionary<int, GameObject>>(){new Dictionary<int, GameObject>()};
+    private int maximumCluster = 50;
+
     // Start is called before the first frame update
     protected override void Start()
     {

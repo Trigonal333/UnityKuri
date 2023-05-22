@@ -13,8 +13,9 @@ public class Line : MonoBehaviour
     public int phase{private set; get;}
     public static Vector3[] contours{private set; get;}
     public static Vector3 moveDirection{private set; get;}
-    public static DestinationEvent destinationEvent;// 移動先と選択状態の解除を伝えるイベント
+    public static IndividualDirectionEvent indivDestinationEvent;// 移動先と選択状態の解除を伝えるイベント
     public static UnityEvent ResetSelect;
+    public ContactFilter2D filter;
 
     private Vector3[] linePositions;
     private int lineIndex = 0;
@@ -22,8 +23,11 @@ public class Line : MonoBehaviour
     private Vector3 principal;
     private float autoConnect = 1.5f; // 線の端同士を自動で繋げる範囲
     private float areaScale = 1.0f, areaThresh = 1.0f;
+    private List<Collider2D> contacts = new List<Collider2D>();
+    private Dictionary<int, Vector3> directions = new Dictionary<int, Vector3>();
     [SerializeField]
     private PolygonCollider2D polygonCollider;
+    private Quadtree quad = new Quadtree(5, Vector3.zero, AllyManager.spaceForMulti*2);
     
     void Start()
     {
@@ -31,7 +35,7 @@ public class Line : MonoBehaviour
         LineRendererContour.positionCount = 0;
         polygonCollider.enabled = false;
         polygonCollider.isTrigger = true;
-        destinationEvent = new DestinationEvent();
+        indivDestinationEvent = new IndividualDirectionEvent();
         ResetSelect = new UnityEvent();
         float diag = Vector3.Distance(Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)), Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0)));
         autoConnect = diag/20f; // 画面サイズで自動接続の範囲を設定
@@ -39,6 +43,7 @@ public class Line : MonoBehaviour
     
     void Update()
     {
+        float val = Input.GetAxis("Mouse ScrollWheel");
         if (Input.GetMouseButtonDown(0))
         {
             switch (phase){
@@ -92,10 +97,18 @@ public class Line : MonoBehaviour
 
                     if(contours.Length>0) // 輪郭があったら保存して方向指示へ
                     {
-                        OverWriteLine();
-                        center = Calculation.CalcAveratge(contours);
                         polygonCollider.enabled=true;
-                        phase = 1;
+                        int num = polygonCollider.OverlapCollider(filter, contacts);
+                        if(num == 0)
+                        {
+                            ClearPoint();
+                        }
+                        else
+                        {
+                            OverWriteLine();
+                            center = Calculation.CalcAveratge(contours);
+                            phase = 1;
+                        }
                     }
                     else
                     {
@@ -104,29 +117,42 @@ public class Line : MonoBehaviour
                     break;
                 case 1:
                     moveDirection = LineRendererDirection.GetPosition(1) - LineRendererDirection.GetPosition(0); // 方向を指示
-                    destinationEvent.Invoke(moveDirection, 0);
-                    ResetSelect.Invoke();
-                    ClearPoint();
-                    ClearDirection();
+                    foreach (Collider2D c in contacts)
+                    {
+                        directions.Add(c.transform.parent.gameObject.GetInstanceID(), moveDirection);
+                    }
+                    PassDirection();
                     phase = 0;
                     break;
             }
         }
-
-        float val = Input.GetAxis("Mouse ScrollWheel");
-        if(val<0 && phase == 1) // 選択後に下スクロールで中央寄せ
+        else if(val!=0 && phase == 1) // 選択後に下スクロールで中央寄せ
         {
-            Vector3 position = ProjectMousetoWorld();
-            if(Calculation.InContour(contours, position))
+            if(val<0)
             {
-                destinationEvent.Invoke(Calculation.CalcAveratge(contours), 1);
-                ResetSelect.Invoke();
-                ClearPoint();
-                ClearDirection();
-                phase = 0;
+                Vector3 position = ProjectMousetoWorld();
+                if(Calculation.InContour(contours, position))
+                {
+                    Vector3 center = Calculation.CalcAveratge(contours);
+                    foreach (Collider2D c in contacts)
+                    {
+                        directions.Add(c.transform.parent.gameObject.GetInstanceID(), center - c.transform.position);
+                    }
+                    PassDirection();
+                    phase = 0;
+                }
+            }
+            else
+            {
+                Vector3 position = ProjectMousetoWorld();
+                if(Calculation.InContour(contours, position))
+                {
+                    directions = Calculation.AssignGridPosition(contacts, quad);
+                    PassDirection();
+                    phase = 0;
+                }
             }
         }
-        
     }
 
     Vector3 ProjectMousetoWorld()
@@ -134,6 +160,13 @@ public class Line : MonoBehaviour
         Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         position.z = -0.01f;
         return position;
+    }
+
+    void PassDirection()
+    {
+        indivDestinationEvent.Invoke(directions);
+        ResetSelect.Invoke();
+        ClearPoint();
     }
 
     void AddPoint(Vector3 position)
@@ -146,14 +179,13 @@ public class Line : MonoBehaviour
     
     void ClearPoint() // 輪郭の消去
     {
+        contacts.Clear();
+        directions.Clear();
         polygonCollider.enabled = false;
         LineRendererContour.positionCount = 1;
-        lineIndex = 0;
-    }
-
-    void ClearDirection()
-    {
         LineRendererDirection.positionCount = 1;
+        lineIndex = 0;
+        quad.Enable();
     }
 
     void SearchContour()

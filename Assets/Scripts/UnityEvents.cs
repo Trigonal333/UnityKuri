@@ -12,3 +12,4 @@ public class ScoreEvent : UnityEvent<int> {}
 public class AnimationEvent : UnityEvent<float, float, bool> {}
 public class DestroyOrRemoveEvent : UnityEvent<int, bool> {}
 public class PassSelfEvent : UnityEvent<GameObject> {}
+public class IndividualDirectionEvent : UnityEvent<Dictionary<int, Vector3>> {}

@@ -24,7 +24,9 @@ public class BodyCollide : MonoBehaviour, IDamageable
     public void OnCollisionEnter2D(Collision2D other)
     {
         if (other.transform.CompareTag("Ally") || other.transform.CompareTag("Enemy"))
-        ParentComponent.HitObject(other);
+        {
+            ParentComponent.HitObject(other);
+        }
     }
 
     public void OnCollisionExit2D(Collision2D other)
@@ -36,7 +38,9 @@ public class BodyCollide : MonoBehaviour, IDamageable
     public void OnCollisionStay2D(Collision2D other)
     {
         if (other.transform.CompareTag("Ally") || other.transform.CompareTag("Enemy"))
-        ParentComponent.HitObject(other);
+        {
+        // ParentComponent.ReassignVelocityETA(other);
+        }
     }
     
     public void Attacked(float atk) // 攻撃を「受けた」関数、防御力とか追加したい時用

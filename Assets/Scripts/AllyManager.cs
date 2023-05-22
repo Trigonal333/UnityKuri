@@ -10,7 +10,6 @@ public class AllyManager : MonoBehaviour
 {
     public int numOfCreature = 0;
     public GameObject Creature;
-    public List<GameObject> Creatures = new List<GameObject>();
     public ObjectPool<GameObject> CreaturePool;
     public static List<MultiplicationEvent> multiEvent = new List<MultiplicationEvent>(); // 増殖、実際の生成、破壊用のイベント
     public static List<SpawnEvent> spawnEvent = new List<SpawnEvent>();
@@ -65,23 +64,28 @@ public class AllyManager : MonoBehaviour
     {
         Collider2D[] tmp = new Collider2D[1];
         Vector3 target;
+        List<Vector3> tmpList = new List<Vector3>();
         for(int i=0;i<reserve.Count;i++)
         {
             fourDirVec3.Shuffle();
             for(int j=0;j<fourDirVec3.Count();j++)
             {
                 target = reserve[i].Item2+fourDirVec3[j]*spaceForMulti;
-                if(Physics2D.OverlapCircle(point: target.ToVec2(),radius: spaceForMulti/2, contactFilter: filter, results: new Collider2D[1])==0)
+                if(Physics2D.OverlapCircle(point: target.ToVec2(), radius: spaceForMulti/2f, contactFilter: filter, results: new Collider2D[1])==0)
                 {
-                    spawnEvent[reserve[i].Item1].Invoke(target, default(Quaternion));
-                    break;
+                    if(Calculation.IsPositionEmpty(tmpList, target, spaceForMulti/2f))
+                    {
+                        spawnEvent[reserve[i].Item1].Invoke(target, default(Quaternion));
+                        tmpList.Add(target);
+                        break;
+                    }
                 }
             }
         }
         reserve.Clear();
     }
 
-    protected void Spawn(Vector3 t=default, Quaternion r=default)
+    protected virtual void Spawn(Vector3 t=default, Quaternion r=default)
     {
         if(CreaturePool.CountActive<limit)
         {

@@ -29,8 +29,8 @@ public class CreatureParent : MonoBehaviour
     public CreatureParent Initialize()
     {
         stat = Status.Entity[this.name.Replace("(Clone)", "")].Clone();
-        Line.destinationEvent.AddListener(SetDestination);
         Line.ResetSelect.AddListener(ResetSelect);
+        Line.indivDestinationEvent.AddListener(SetDestination);
         return this;
     }
 
@@ -96,21 +96,15 @@ public class CreatureParent : MonoBehaviour
         }
     }
 
-    public void SetDestination(Vector3 dest, int mode)
+    public void SetDestination(Dictionary<int, Vector3> dict)
     {
         if(selected) 
         {
-            switch(mode)
-            {
-                case 0:
-                    destinationVector = dest;
-                    break;
-                case 1:
-                    destinationVector = dest - transform.position;
-                    break;
-            }
+            dict.TryGetValue(gameObject.GetInstanceID(), out destinationVector);
             Move();
             ETA = destinationVector.magnitude / stat.speed;
+            // Debug.DrawRay(transform.position, destinationVector, Color.green, 5, false);
+            // DebugViz.DrawArrow.ForDebug(transform.position, destinationVector, Color.green, 5, 0.25f, 20f, false);
         }
     }
 
@@ -123,17 +117,17 @@ public class CreatureParent : MonoBehaviour
     private void Stop()
     {
         isStop = true;
-        rigid2D.AddForce(-rigid2D.velocity, ForceMode2D.Impulse);
-        // rigid2D.velocity = Vector2.zero;
+        // rigid2D.AddForce(-rigid2D.velocity, ForceMode2D.Impulse);
+        rigid2D.velocity = Vector2.zero;
     }
 
     private void Move()
     {
-        isStop = false; 
-        rigid2D.AddForce(destinationVector.normalized * stat.speed, ForceMode2D.Impulse);
+        isStop = false;
+        rigid2D.velocity = destinationVector.normalized * (stat.speed - rigid2D.velocity.magnitude);
     }
 
-    public virtual void EnterLine(Collider2D other)
+    public void EnterLine(Collider2D other)
     {
         Stop();
         selected = true;
@@ -142,16 +136,34 @@ public class CreatureParent : MonoBehaviour
 
     public void HitObject(Collision2D other)
     {
-        // Debug.Log(other.relativeVelocity);
-        if(Vector2.Angle(rigid2D.velocity, other.relativeVelocity) > 5f)
+        // Debug.Log(gameObject.name);
+        // Debug.Log(rigid2D.velocity.magnitude);
+        //     Debug.Log(other.relativeVelocity);
+        //     Debug.Log(Vector2.Angle(rigid2D.velocity, other.relativeVelocity));
+        if(Vector2.Angle(rigid2D.velocity, other.relativeVelocity) < 5f)
         {
-            // Stop();
+            rigid2D.velocity=other.rigidbody.velocity;
+            // ETA = ETA * stat.speed / other.rigidbody.velocity.magnitude;
+        }
+        else if(Vector2.Angle(rigid2D.velocity, other.relativeVelocity) > 175f)
+        {
+            Move();
+        }
+        // if(Vector2.Angle(rigid2D.velocity, other.relativeVelocity) > 5f && Vector2.Angle(rigid2D.velocity, other.relativeVelocity) < 175f)
+        else
+        {
+        // Debug.Log(gameObject.name + other.contacts[0].normal + ", " + rigid2D.velocity + ", " + Vector2.Angle(rigid2D.velocity, other.contacts[0].normal));
+        // Debug.Log(gameObject.name + other.relativeVelocity + ", " + rigid2D.velocity + ", " + Vector2.Angle(rigid2D.velocity, other.relativeVelocity));
+            Stop();
         }
     }
 
     public void LeaveObject(Collision2D other)
     {
-        // Move();
+        // Debug.Log(gameObject.name);
+        // Debug.Log(rigid2D.velocity.magnitude);
+        Move();
+        // Debug.Log(rigid2D.velocity.magnitude);
     }
 
     public void AddCandidate(Collider2D other) // 周囲に攻撃対象がいる場合だけ攻撃カウントダウンを開始したい

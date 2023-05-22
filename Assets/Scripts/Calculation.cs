@@ -15,6 +15,18 @@ public static class Calculation
 
         return sum / vectors.Length;
     }
+
+    public static Vector3 CalcAveratge(List<Collider2D> vectors)
+    {
+        Vector3 sum = Vector3.zero;
+
+        foreach (var v in vectors)
+        {
+            sum += v.transform.position;
+        }
+
+        return sum / vectors.Count;
+    }
  
     public static float Cross(Vector2 a, Vector2 b)
     {
@@ -100,4 +112,41 @@ public static class Calculation
          v.y = (sin * tx) + (cos * ty);
          return v;
      }
+
+    public static bool IsPositionEmpty(List<Vector3> points, Vector3 verify, float range)
+    {
+        foreach (Vector3 p in points)
+        {
+            if (Vector3.Distance(verify, p) < range)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static List<Vector3> CreateGrid(Vector3 upperleft, int num, float distance)
+    {
+        List<Vector3> retval = new List<Vector3>();
+        for(int i=0; i<num; i++)
+        {
+            for(int j=0; j<num; j++)
+            {
+
+            }
+        }
+        return retval;
+    }
+
+    public static Dictionary<int, Vector3> AssignGridPosition(List<Collider2D> points, Quadtree grid)
+    {
+        Vector3 center = CalcAveratge(points);
+        points.Sort((x, y) => ((center - x.transform.position).sqrMagnitude).CompareTo((center - y.transform.position).sqrMagnitude));
+        Dictionary<int, Vector3> retval = new Dictionary<int, Vector3>();
+        for(int i = 0; i<points.Count;i++)
+        {
+            retval.Add(points[i].transform.parent.gameObject.GetInstanceID(), grid.FindNearestBottom(points[i].transform.position-center, false));
+        }
+        return retval;
+    }
 }
