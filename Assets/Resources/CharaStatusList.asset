@@ -32,21 +32,21 @@ MonoBehaviour:
     - Enemy
     maximumNumber: 50
   - charaName: Virus
-    hp: 100
-    atk: 3
+    hp: 150
+    atk: 10
     speed: 5
-    attackTime: 2.4
+    attackTime: 2
     multiplyTime: 2
     attackTgt:
     - Ally
     - Wound
     maximumNumber: 150
   - charaName: Platelet
-    hp: 150
+    hp: 100
     atk: 7
     speed: 7
     attackTime: 1.5
     multiplyTime: 2
     attackTgt:
     - Wound
-    maximumNumber: 100
+    maximumNumber: 150

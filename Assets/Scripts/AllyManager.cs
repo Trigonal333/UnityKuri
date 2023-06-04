@@ -21,11 +21,11 @@ public class AllyManager : MonoBehaviour
     [SerializeField]
     protected ContactFilter2D filter;
     public static Vector3[] fourDirVec3 = { Vector3.up, Vector3.right, Vector3.down, Vector3.left }; // 生成する方向
+    protected Vector3 tmpVec3;
+    protected Quaternion tmpQuat;
     
     private static List<(int, Vector3)> reserve = new List<(int, Vector3)>(); // 生成、破壊イベントの一時保管用
     private List<int> destroyReserve = new List<int>();
-    private Vector3 tmpVec3;
-    private Quaternion tmpQuat;
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -33,7 +33,10 @@ public class AllyManager : MonoBehaviour
         limit = Status.Entity[this.name.Replace("Manager", "")].maximumNumber; // Scriptableオブジェクトから最大数を取得
         CreaturePool = new ObjectPool<GameObject>(
             createFunc: () => Instantiate(Creature, Vector3.zero, Quaternion.identity, this.transform),
-            actionOnGet: target => target.SetActive(true),
+            actionOnGet: target => {target.SetActive(true);
+                                    target.transform.position = tmpVec3;
+                                    target.transform.rotation = tmpQuat;
+                                    target.GetComponent<CreatureParent>().Initialize().RegisterEvent(multiEvent[ids], destroyEvent[ids]);},
             actionOnRelease: target => target.SetActive(false),
             actionOnDestroy: target => Destroy(target),
             collectionCheck: true,
@@ -55,7 +58,7 @@ public class AllyManager : MonoBehaviour
 
     }
 
-    protected void LateUpdate()
+    protected virtual void LateUpdate()
     {
         SolveStack();
     }
@@ -89,10 +92,9 @@ public class AllyManager : MonoBehaviour
     {
         if(CreaturePool.CountActive<limit)
         {
-            var tmpGO = CreaturePool.Get();
-            tmpGO.transform.position = t;
-            tmpGO.transform.rotation = r;
-            tmpGO.GetComponent<CreatureParent>().Initialize().RegisterEvent(multiEvent[ids], destroyEvent[ids]);
+            tmpVec3 = t;
+            tmpQuat = r;
+            CreaturePool.Get();
         }
     }
 
@@ -106,7 +108,7 @@ public class AllyManager : MonoBehaviour
         reserve.Add((id, position));
     }
 
-    protected void DestroyCreature(GameObject gameObj)
+    protected virtual void DestroyCreature(GameObject gameObj)
     {
         CreaturePool.Release(gameObj);
     }

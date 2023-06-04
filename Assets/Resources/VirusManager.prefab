@@ -97,7 +97,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numOfCreature: 0
   Creature: {fileID: 6318235125519749811, guid: 0a7addd907b1c50438de71b1e3fa4ebd, type: 3}
-  Creatures: []
   filter:
     useTriggers: 0
     useLayerMask: 0
@@ -112,3 +111,4 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  ai: {fileID: 8539461964542705122, guid: 06a243e350c7adf45a327a03d275dc5d, type: 3}

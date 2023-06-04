@@ -97,7 +97,7 @@ public static class Calculation
     {
         for (var i = array.Count - 1; i > 0; --i)
         {
-            var j = Random.Range(0, i + 1);
+            var j = Random.Range(0, i);
             (array[i], array[j]) = (array[j], array[i]);
         }
     }
@@ -125,19 +125,6 @@ public static class Calculation
         return true;
     }
 
-    public static List<Vector3> CreateGrid(Vector3 upperleft, int num, float distance)
-    {
-        List<Vector3> retval = new List<Vector3>();
-        for(int i=0; i<num; i++)
-        {
-            for(int j=0; j<num; j++)
-            {
-
-            }
-        }
-        return retval;
-    }
-
     public static Dictionary<int, Vector3> AssignGridPosition(List<Collider2D> points, Quadtree grid)
     {
         Vector3 center = CalcAveratge(points);
@@ -147,6 +134,7 @@ public static class Calculation
         {
             retval.Add(points[i].transform.parent.gameObject.GetInstanceID(), grid.FindNearestBottom(points[i].transform.position-center, false));
         }
+        grid.Enable();
         return retval;
     }
 }

@@ -26,7 +26,7 @@ public class CreatureParent : MonoBehaviour
     private bool isStop = true;
     private List<string> attackTag = new List<string>(){};
 
-    public CreatureParent Initialize()
+    public virtual CreatureParent Initialize()
     {
         stat = Status.Entity[this.name.Replace("(Clone)", "")].Clone();
         Line.ResetSelect.AddListener(ResetSelect);
@@ -96,15 +96,18 @@ public class CreatureParent : MonoBehaviour
         }
     }
 
-    public void SetDestination(Dictionary<int, Vector3> dict)
+    public virtual void SetDestination(Dictionary<int, Vector3> dict)
     {
         if(selected) 
         {
-            dict.TryGetValue(gameObject.GetInstanceID(), out destinationVector);
-            Move();
-            ETA = destinationVector.magnitude / stat.speed;
-            // Debug.DrawRay(transform.position, destinationVector, Color.green, 5, false);
-            // DebugViz.DrawArrow.ForDebug(transform.position, destinationVector, Color.green, 5, 0.25f, 20f, false);
+            if(dict.TryGetValue(gameObject.GetInstanceID(), out destinationVector))
+            {
+                if(destinationVector.sqrMagnitude > .1f)
+                {
+                    Move();
+                    ETA = destinationVector.magnitude / stat.speed;
+                }
+            }
         }
     }
 
@@ -121,7 +124,7 @@ public class CreatureParent : MonoBehaviour
         rigid2D.velocity = Vector2.zero;
     }
 
-    private void Move()
+    protected void Move()
     {
         isStop = false;
         rigid2D.velocity = destinationVector.normalized * (stat.speed - rigid2D.velocity.magnitude);
